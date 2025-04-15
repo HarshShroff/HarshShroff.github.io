@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Harsh Shroff</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <div class="scroll-progress"></div>
+    <div id="particles-js"></div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logo-link" aria-label="Go to Home">
+                <span class="logo-text">Harsh Shroff</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Resume Header Section -->
+        <section class="resume-header">
+            <div class="about-content">
+                <h1>About Me</h1>
+
+                <div class="resume-header-card">
+                    <div class="resume-profile">
+                        <div class="profile-content">
+                            <p>I'm an AI/ML Engineer and Data Scientist passionate about building intelligent systems that solve real-world problems.</p>
+                            <p>My journey in AI and data science began with a fascination for how intelligent systems could solve real-world problems. With a background in Electronics and Communications Engineering from Vishwakarma Government Engineering
+                                College, I developed a strong foundation in technical problem-solving before pursuing my Master's in Data Science at UMBC.</p>
+                            <p>Working with robotics at UMBC's AI and Robotics Center opened my eyes to the possibilities of combining physical systems with artificial intelligence. My experience at The Conservation Fund showed me how AI could be applied
+                                to environmental and sustainability challenges.</p>
+                            <p>Now at VITG Corp., I'm focused on creating AI solutions that automate processes and extract insights from complex data sources, with a particular interest in generative AI and its applications across industries.</p>
+                        </div>
+                        <div class="profile-image">
+                            <img src="assets/img/profile.jpg" alt="Harsh Shroff">
+                        </div>
+                    </div>
+                    <div class="resume-actions">
+                        <a href="assets/docs/Harsh_Shroff_Resume.pdf" class="btn primary" download><i class="fas fa-download"></i> Download Resume</a>
+                        <a href="contact.html" class="btn secondary"><i class="fas fa-envelope"></i> Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section (from About page) -->
+        <!-- <section class="resume-section">
+            <div class="section-card">
+                <h2>My Journey</h2>
+                <div class="about-content">
+                    <p>My journey in AI and data science began with a fascination for how intelligent systems could solve real-world problems. With a background in Electronics and Communications Engineering from Vishwakarma Government Engineering College,
+                        I developed a strong foundation in technical problem-solving before pursuing my Master's in Data Science at UMBC.</p>
+                    <p>Working with robotics at UMBC's AI and Robotics Center opened my eyes to the possibilities of combining physical systems with artificial intelligence. My experience at The Conservation Fund showed me how AI could be applied to environmental
+                        and sustainability challenges.</p>
+                    <p>Now at VITG Corp., I'm focused on creating AI solutions that automate processes and extract insights from complex data sources, with a particular interest in generative AI and its applications across industries.</p>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Technical Skills Section -->
+        <section class="resume-section">
+            <div class="section-card">
+                <h2>Technical Skills</h2>
+                <div class="skills-matrix">
+                    <!-- Skill Category 1 -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fas fa-brain skill-category-icon"></i>
+                            <h3>Machine Learning & AI</h3>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Generative AI (LLMs, RAG)</span>
+                                    <span class="skill-level-text">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Deep Learning (TensorFlow, PyTorch)</span>
+                                    <span class="skill-level-text">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Computer Vision & NLP</span>
+                                    <span class="skill-level-text">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">MLOps (MLflow, Kubeflow)</span>
+                                    <span class="skill-level-text">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Category 2 -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fas fa-cloud skill-category-icon"></i>
+                            <h3>Data Engineering & Cloud Computing</h3>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">AWS (Lambda, EC2, S3, etc.)</span>
+                                    <span class="skill-level-text">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">SQL & NoSQL Databases</span>
+                                    <span class="skill-level-text">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Data Pipelines (ETL, Airflow)</span>
+                                    <span class="skill-level-text">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Big Data (Spark, Hadoop)</span>
+                                    <span class="skill-level-text">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-width="75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Category 3 -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fas fa-chart-bar skill-category-icon"></i>
+                            <h3>Data Analysis & Visualization</h3>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Python (Pandas, NumPy, etc.)</span>
+                                    <span class="skill-level-text">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">BI Tools (Tableau, Power BI)</span>
+                                    <span class="skill-level-text">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Statistical Analysis</span>
+                                    <span class="skill-level-text">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Category 4 -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fas fa-code skill-category-icon"></i>
+                            <h3>Software Development & Automation</h3>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Python, R, SQL</span>
+                                    <span class="skill-level-text">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">API Development (FastAPI, Flask)</span>
+                                    <span class="skill-level-text">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">DevOps (CI/CD, Docker, Kubernetes)</span>
+                                    <span class="skill-level-text">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section class="resume-section">
+            <div class="section-card">
+                <h2>Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">
+                            <span>Jun 2024 - Present</span>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <h3>Data Analyst | ML Engineer</h3>
+                                <h4>VITG Corp., Halethorpe, MD</h4>
+                                <ul>
+                                    <li>Developed a resume scoring Slack bot powered by Llama LLM and AWS services (Lambda, EC2, S3) to automate candidate screening, reducing manual processing by 60%.</li>
+                                    <li>Built a chatbot-driven geospatial tool to match addresses with government conservation zones, aiding environmental planning and property regulations in Hyderabad.</li>
+                                    <li>Automated geospatial data extraction from 2500+ scanned PDFs/images using OCR-based lat-long extraction and Claude 3.5 Haiku LLM, visualizing results on interactive maps.</li>
+                                    <li>Designed and deployed an AI-powered web-app using Streamlit and AWS for real-time geospatial analysis, improving data accessibility by 30%.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">
+                            <span>Mar 2023 - Dec 2024</span>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <h3>Data Researcher – AI & Robotics</h3>
+                                <h4>Center for Real-time Distributed Sensing and Autonomy, UMBC</h4>
+                                <ul>
+                                    <li>Led a team of 5 to develop AI-powered multi-modal robotic navigation for Boston Dynamics Spot, Clearpath Husky & Jackal robots under the ArtIAMAS project (funded by the US Army Research Lab & DEVCOM).</li>
+                                    <li>Implemented gesture-based robotic controls using Microsoft HoloLens 2 and Python, enabling intuitive human-robot interaction for the "Human Machine Teaming" project.</li>
+                                    <li>Optimized LIDAR-based pathfinding algorithms using reinforcement learning, reducing navigation errors by 20% in dynamic environments.</li>
+                                    <li>Designed a GPS-based navigation system for Clearpath Husky robots, achieving 95% path accuracy.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">
+                            <span>Aug 2023 - Dec 2023</span>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <h3>Data Science Intern</h3>
+                                <h4>Freshwater Institute – The Conservation Fund, Shepherdstown, WV</h4>
+                                <ul>
+                                    <li>Achieved a 92% accuracy rate in fish fillet color grading using Python, OpenCV & YOLOv8 Classifier model deployed on Raspberry Pi 4.</li>
+                                    <li>Designed and developed an in-house 3D printed portable case for a real-time assessment on fillet grading in aquaculture.</li>
+                                    <li>Co-authored a research paper titled "Fish Fillet Color Profiling Using Deep Learning", detailing the application of AI in precision aquaculture and food safety.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="resume-section">
+            <div class="section-card">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div class="degree-institution">
+                                <h3>Master's in Data Science</h3>
+                                <h4>University of Maryland Baltimore County (UMBC)</h4>
+                            </div>
+                            <div class="education-duration">
+                                <span>Aug 2022 - May 2024</span>
+                            </div>
+                        </div>
+                        <div class="education-details">
+                            <p><strong>GPA:</strong> 3.8/4.0</p>
+                            <p><strong>Relevant Coursework:</strong> Natural Language Processing, Data Analysis & Visualization, Data Management, Big Data Processing, Financial Data Science, Machine Learning, Artificial Intelligence</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="education-item">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div class="degree-institution">
+                                <h3>Bachelor of Engineering - Electronics and Communications</h3>
+                                <h4>Vishwakarma Government Engineering College</h4>
+                            </div>
+                            <div class="education-duration">
+                                <span>Jul 2019 - Jun 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="resume-section">
+            <div class="section-card">
+                <h2>Key Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card-resume">
+                        <div class="project-header-resume">
+                            <h3>Real-Time Infrastructure Risk Assessment</h3>
+                            <p class="project-tech-resume">Python, Flask, PostgreSQL, PostGIS, Leaflet, API Integration</p>
+                        </div>
+                        <div class="project-description-resume">
+                            <ul>
+                                <li>Developed a web-based application that assesses and visualizes real-time risks to transportation infrastructure by integrating multiple data sources.</li>
+                                <li>Implemented a Flask backend to integrate data from OpenStreetMap, OpenWeatherMap, and TomTom Traffic API, calculating risk scores based on current conditions.</li>
+                                <li>Created interactive map visualizations with color-coded risk indicators using Leaflet and PostgreSQL with PostGIS for spatial data management.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card-resume">
+                        <div class="project-header-resume">
+                            <h3>Resume Scoring Slack Bot</h3>
+                            <p class="project-tech-resume">AWS Lambda, EC2, S3, Llama LLM, Python, Slack API</p>
+                        </div>
+                        <div class="project-description-resume">
+                            <ul>
+                                <li>Developed a Slackbot leveraging AWS and Llama LLM, allowing HR to upload resumes and JD, analyze candidate suitability, and generate insights.</li>
+                                <li>Reduced manual candidate screening by 60% and improved candidate quality by 25%.</li>
+                                <li>Implemented a scalable architecture for handling multiple requests simultaneously.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card-resume">
+                        <div class="project-header-resume">
+                            <h3>AirbnbLense – Recommendation System</h3>
+                            <p class="project-tech-resume">Python, OpenAI API, Computer Vision, Tableau, Big Data</p>
+                        </div>
+                        <div class="project-description-resume">
+                            <ul>
+                                <li>Built a recommendation engine combining structured and unstructured data (160MBs of CSV, 130GBs of images).</li>
+                                <li>Implemented computer vision models to analyze listing images for style, color, and object recognition.</li>
+                                <li>Reduced Airbnb bounce rates by 20% and improved engagement by 40% through tailored recommendations.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card-resume">
+                        <div class="project-header-resume">
+                            <h3>Fish Fillet Color Grading System</h3>
+                            <p class="project-tech-resume">Python, OpenCV, YOLOv8, Raspberry Pi, 3D Printing</p>
+                        </div>
+                        <div class="project-description-resume">
+                            <ul>
+                                <li>Achieved a 92% accuracy rate in fish fillet color grading using Python, OpenCV & YOLOv8 Classifier model.</li>
+                                <li>Deployed the model on Raspberry Pi 4 within a custom 3D-printed handheld device for real-time assessment.</li>
+                                <li>Co-authored a research paper detailing the application of AI in precision aquaculture and food safety.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="view-all-projects">
+                    <a href="projects.html" class="btn secondary">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Section (from About page) -->
+        <section class="resume-section">
+            <div class="section-card">
+                <h2>Beyond Work</h2>
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <div class="interest-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Robotics</h3>
+                        <p>Exploring how robots can assist in everyday tasks and specialized environments.</p>
+                    </div>
+
+                    <div class="interest-card">
+                        <div class="interest-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Generative AI</h3>
+                        <p>Experimenting with the latest LLMs and generative models to create new possibilities.</p>
+                    </div>
+
+                    <div class="interest-card">
+                        <div class="interest-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h3>Outdoor Activities</h3>
+                        <p>Hiking and exploring nature to find balance and inspiration.</p>
+                    </div>
+
+                    <div class="interest-card">
+                        <div class="interest-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Continuous Learning</h3>
+                        <p>Always seeking new knowledge and skills in emerging technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="resume-section">
+            <div class="section-card">
+                <h2>Achievements & Certifications</h2>
+                <div class="achievements-badges">
+                    <div class="achievement-badge">
+                        <div class="badge-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h4>AWS Machine Learning Foundations Certification</h4>
+                    </div>
+
+                    <div class="achievement-badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4>Published Research in IEEE Xplore</h4>
+                    </div>
+
+                    <div class="achievement-badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>1st Place, ITU International Hackathon</h4>
+                    </div>
+
+                    <div class="achievement-badge">
+                        <div class="badge-icon">
+                            <i class="fab fa-chrome"></i>
+                        </div>
+                        <h4>LinkedIn Job Analyzer Chrome Extension</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="enhanced-footer">
+        <div class="footer-container">
+            <!-- Contact Information Section -->
+            <div class="footer-section contact-section">
+                <h3>Contact Me</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:harshrofff@gmail.com">harshrofff@gmail.com</a></li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+16674645255">667-464-5255</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> United States</li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/harshroff/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/HarshShroff/" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                    <a href="mailto:harshrofff@gmail.com" aria-label="Email Me"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section links-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Resume Download Section -->
+            <div class="footer-section download-section">
+                <h3>Download Resume</h3>
+                <p>Get a copy of my detailed resume to learn more about my experience in AI/ML, data science, and robotics.</p>
+                <a href="assets/docs/Harsh_Shroff_Resume.pdf" class="btn footer-btn" download><i class="fas fa-download"></i> Download PDF</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Harsh Shroff. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- 
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="projects.html"><i class="fas fa-code"></i><span>Projects</span></a></li>
+            <li><a href="resume.html"><i class="fas fa-file-alt"></i><span>Resume</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+        </ul>
+    </nav> -->
+
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/particles.js"></script>
+
+</body>
+
+</html>

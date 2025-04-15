@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Shroff</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <div class="scroll-progress"></div>
+
+    <div id="particles-js"></div>
+    <header>
+        <div class="logo">
+            <!-- <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM20 7.5C24.142 7.5 27.5 10.858 27.5 15C27.5 19.142 24.142 22.5 20 22.5C15.858 22.5 12.5 19.142 12.5 15C12.5 10.858 15.858 7.5 20 7.5ZM20 35C15.833 35 12.083 33.333 9.583 30.583C9.667 25.292 15 22.5 20 22.5C24.983 22.5 30.333 25.292 30.417 30.583C27.917 33.333 24.167 35 20 35Z" fill="currentColor"/>
+            </svg> -->
+            <a href="index.html" class="logo-link" aria-label="Go to Home">
+                <span class="logo-text">Harsh Shroff</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <!-- <li><a href="about.html">About</a></li> -->
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <!-- <div class="hero-card"> -->
+            <div class="hero-content">
+                <h1>Harsh Shroff</h1>
+                <div class="typed-container">
+                    <span id="typed"></span>
+                </div>
+                <p class="hero-description">Innovative AI/ML Engineer, Data Scientist, and Data Analyst with expertise in large-scale data processing, machine learning, generative AI, deep learning, and data engineering.</p>
+                <div class="hero-cta">
+                    <a href="projects.html" class="btn primary">View Projects</a>
+                    <a href="assets/docs/Harsh_Shroff_Resume.pdf" class="btn secondary" download>Download Resume</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="neural-network">
+                    <!-- Neural network animation will be handled by CSS -->
+                </div>
+            </div>
+            <!-- </div> -->
+        </section>
+
+        <section class="skills-overview">
+            <h2>Core Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Machine Learning & AI</h3>
+                    <p>Generative AI (LLMs, RAG), Deep Learning, NLP, Computer Vision, Time Series Forecasting</p>
+                    <div class="skill-tags">
+                        <span>TensorFlow</span>
+                        <span>PyTorch</span>
+                        <span>LangChain</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Engineering</h3>
+                    <p>AWS, SQL & NoSQL Databases, Data Pipelines (ETL, Airflow, Spark, Hadoop)</p>
+                    <div class="skill-tags">
+                        <span>AWS</span>
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Data Analysis</h3>
+                    <p>Python (Pandas, NumPy), BI Tools (Tableau, Power BI), Statistical Analysis</p>
+                    <div class="skill-tags">
+                        <span>Pandas</span>
+                        <span>Tableau</span>
+                        <span>Streamlit</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Software Development</h3>
+                    <p>Python, R, SQL, C++, API Development, DevOps (CI/CD, Docker, Kubernetes)</p>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-projects">
+            <h2>Featured Projects</h2>
+            <div class="project-cards">
+                <a href="projects.html#infrastructure-risk">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/projects/infrastructure-risk.png" alt="Infrastructure Risk Assessment">
+                        </div>
+                        <div class="project-info">
+                            <h3>Real-Time Infrastructure Risk Assessment</h3>
+                            <p>A web-based application that integrates multiple data sources to assess and visualize real-time risks to transportation infrastructure.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>PostgreSQL</span>
+                                <span>API Integration</span>
+                            </div>
+                            <!-- <a href="projects.html#infrastructure-risk" class="btn small">Learn More</a> -->
+                        </div>
+                    </div>
+                </a>
+                <a href="projects.html#resume-bot">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/projects/resume-bot.jpg" alt="Resume Scoring Bot">
+                        </div>
+                        <div class="project-info">
+                            <h3>Resume Scoring Slack Bot</h3>
+                            <p>LLM-powered bot using Llama and AWS services to automate candidate screening.</p>
+                            <div class="project-tech">
+                                <span>AWS Lambda</span>
+                                <span>LLMs</span>
+                                <span>Python</span>
+                            </div>
+                            <!-- <a href="projects.html#resume-bot" class="btn small">Learn More</a> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="view-all">
+                <a href="projects.html" class="btn secondary">View All Projects</a>
+            </div>
+        </section>
+
+        <!-- <section class="experience-overview">
+            <h2>Professional Journey</h2>
+            <div class="experience-cards">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="experience-title">
+                            <h3>Data Analyst | ML Engineer</h3>
+                            <h4>VITG Corp.</h4>
+                        </div>
+                    </div>
+                    <div class="experience-date">Jun 2024 - Present</div>
+                    <div class="experience-description">
+                        <p>Building AI-powered solutions for automated candidate screening and geospatial analysis.</p>
+                    </div>
+                    <a href="about.html#experience" class="experience-link">Read More</a>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="experience-title">
+                            <h3>Data Researcher – AI & Robotics</h3>
+                            <h4>UMBC</h4>
+                        </div>
+                    </div>
+                    <div class="experience-date">Mar 2023 – Dec 2024</div>
+                    <div class="experience-description">
+                        <p>Developing AI-powered robotic navigation and human-robot interaction systems.</p>
+                    </div>
+                    <a href="about.html#experience" class="experience-link">Read More</a>
+                </div>
+            </div>
+        </section> -->
+    </main>
+
+    <footer class="enhanced-footer">
+        <div class="footer-container">
+            <!-- Contact Information Section -->
+            <div class="footer-section contact-section">
+                <h3>Contact Me</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:harshrofff@gmail.com">harshrofff@gmail.com</a></li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+16674645255">667-464-5255</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> United States</li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/harshroff/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/HarshShroff/" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                    <a href="mailto:harshrofff@gmail.com" aria-label="Email Me"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section links-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Resume Download Section -->
+            <div class="footer-section download-section">
+                <h3>Download Resume</h3>
+                <p>Get a copy of my detailed resume to learn more about my experience in AI/ML, data science, and robotics.</p>
+                <a href="assets/docs/Harsh_Shroff_Resume.pdf" class="btn footer-btn" download><i class="fas fa-download"></i> Download PDF</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Harsh Shroff. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <!-- <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Harsh Shroff. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/harshroff/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/HarshShroff/" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:harshrofff@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/particles.js"></script>
+
+    <!-- <nav class="mobile-nav">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i><span>About</span></a></li>
+            <li><a href="projects.html"><i class="fas fa-code"></i><span>Projects</span></a></li>
+            <li><a href="resume.html"><i class="fas fa-file-alt"></i><span>Resume</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+        </ul>
+    </nav> -->
+
+</body>
+
+</html>

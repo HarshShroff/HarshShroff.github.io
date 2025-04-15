@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Harsh Shroff</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <div class="scroll-progress"></div>
+    <div id="particles-js"></div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logo-link" aria-label="Go to Home">
+                <span class="logo-text">Harsh Shroff</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="about.html">About</a></li> -->
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects-hero">
+            <!-- <div class="projects-hero-card"> -->
+            <h1>My Projects</h1>
+            <p class="projects-intro">Explore my portfolio of AI, ML, and data science projects that demonstrate my technical expertise and problem-solving abilities.</p>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ml-ai">ML & AI</button>
+                <button class="filter-btn" data-filter="data-engineering">Data Engineering</button>
+                <button class="filter-btn" data-filter="robotics">Robotics</button>
+                <button class="filter-btn" data-filter="visualization">Visualization</button>
+            </div>
+            <!-- </div> -->
+        </section>
+
+        <section class="projects-grid">
+            <div id="tap-hint" class="tap-hint">
+                <i class="fas fa-hand-pointer"></i>
+                <span>Tap a project card to know more</span>
+                <button id="close-tap-hint" aria-label="Close hint">&times;</button>
+            </div>
+            <div class="project-item" data-category="data-engineering visualization" id="infrastructure-risk">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/projects/infrastructure-risk.png" alt="Real-Time Infrastructure Risk Assessment">
+                    </div>
+                    <div class="project-info">
+                        <h3>Real-Time Infrastructure Risk Assessment for Transportation Networks</h3>
+                        <div class="project-meta">
+                            <span class="project-date">April 2025</span>
+                            <span class="project-type">Data Integration & Visualization</span>
+                        </div>
+                        <p>A sophisticated web-based application that assesses and visualizes real-time risks to transportation infrastructure by integrating multiple data sources to provide dynamic risk assessments.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>PostgreSQL</span>
+                            <span>PostGIS</span>
+                            <span>Leaflet</span>
+                            <span>API Integration</span>
+                        </div>
+                        <div class="project-details">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Real-time risk assessment with dynamic scoring based on current conditions</li>
+                                <li>Interactive map visualization with color-coded risk indicators</li>
+                                <li>Multi-source data integration (OpenStreetMap, OpenWeatherMap, TomTom Traffic API)</li>
+                                <li>Advanced filtering and sorting capabilities for infrastructure analysis</li>
+                                <li>Responsive design for optimal user experience across devices</li>
+                            </ul>
+
+                            <h4>Technical Implementation</h4>
+                            <p>The application uses a Flask backend to integrate data from multiple APIs, calculating risk scores based on traffic congestion, weather conditions, and infrastructure characteristics. The frontend leverages Leaflet for interactive
+                                map visualizations, with a PostgreSQL database using PostGIS extension for efficient spatial data management.</p>
+
+                            <h4>Outcomes</h4>
+                            <p>Provides transportation authorities with critical real-time insights for infrastructure management, enabling proactive maintenance planning and emergency response prioritization based on current risk levels.</p>
+
+                            <div class="project-links">
+                                <a href="https://github.com/HarshShroff/Real-Time-Infrastructure-Risk-Assessment-for-Transportation-Networks" target="_blank" class="btn small"><i class="fab fa-github"></i> View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="ml-ai" id="resume-bot">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/projects/resume-bot.jpg" alt="Resume Scoring Bot">
+                    </div>
+                    <div class="project-info">
+                        <h3>Resume Scoring Slack Bot</h3>
+                        <div class="project-meta">
+                            <span class="project-date">April 2025</span>
+                            <span class="project-type">LLM Application</span>
+                        </div>
+                        <p>An intelligent resume screening solution powered by Llama LLM and AWS services that automates candidate evaluation, reducing manual processing by 60%.</p>
+                        <div class="project-tech">
+                            <span>AWS Lambda</span>
+                            <span>EC2</span>
+                            <span>S3</span>
+                            <span>Llama LLM</span>
+                            <span>Python</span>
+                            <span>Slack API</span>
+                        </div>
+                        <div class="project-details">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Automated resume parsing and skill extraction</li>
+                                <li>Intelligent scoring based on job requirements</li>
+                                <li>Real-time feedback through Slack interface</li>
+                                <li>Scalable architecture for handling multiple requests</li>
+                            </ul>
+
+                            <h4>Technical Implementation</h4>
+                            <p>The bot uses AWS Lambda functions to process incoming resumes, extracts text using AWS Textract, and leverages the Llama LLM to analyze and score candidates based on predefined criteria. Results are delivered in real-time through
+                                the Slack API.</p>
+
+                            <h4>Outcomes</h4>
+                            <p>Reduced manual resume screening time by 60%, improved candidate quality by 25%, and standardized the evaluation process across the organization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="ml-ai data-engineering" id="geospatial">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/projects/geospatial.jpg" alt="Geospatial Analysis Tool">
+                    </div>
+                    <div class="project-info">
+                        <h3>Chatbot-Driven Geospatial Analysis Tool</h3>
+                        <div class="project-meta">
+                            <span class="project-date">March 2025</span>
+                            <span class="project-type">Geospatial AI</span>
+                        </div>
+                        <p>An intelligent system that matches addresses with government conservation zones, aiding environmental planning and property regulations in Hyderabad.</p>
+                        <div class="project-tech">
+                            <span>AWS</span>
+                            <span>Claude 3.5</span>
+                            <span>OCR</span>
+                            <span>Python</span>
+                            <span>Streamlit</span>
+                            <span>GIS</span>
+                        </div>
+                        <div class="project-details">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Natural language interface for geospatial queries</li>
+                                <li>Automated extraction of coordinates from scanned documents</li>
+                                <li>Interactive mapping of conservation zones</li>
+                                <li>Real-time property regulation assessment</li>
+                            </ul>
+
+                            <h4>Technical Implementation</h4>
+                            <p>The system uses OCR and Claude 3.5 Haiku LLM to extract latitude-longitude data from over 2,500 scanned PDFs and images. The extracted data is processed and visualized on interactive maps, allowing users to query conservation
+                                zone information through a natural language interface.</p>
+
+                            <h4>Outcomes</h4>
+                            <p>Improved data accessibility by 30%, reduced processing time for environmental assessments, and provided a user-friendly interface for non-technical stakeholders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="robotics ml-ai">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/projects/robot-dashboard.jpg" alt="Robotic Dashboard">
+                    </div>
+                    <div class="project-info">
+                        <h3>Dashboard for Autonomous Robotic Patrols</h3>
+                        <div class="project-meta">
+                            <span class="project-date">November 2024</span>
+                            <span class="project-type">Robotics & AI</span>
+                        </div>
+                        <p>A real-time monitoring system for tracking autonomous robots in military simulations, providing critical data on battery health, network connectivity, and asset movement.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>ROS</span>
+                            <span>LiDAR</span>
+                            <span>Deep Learning</span>
+                            <span>Computer Vision</span>
+                            <span>Dash</span>
+                        </div>
+                        <div class="project-details">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Real-time tracking of multiple robotic assets</li>
+                                <li>Battery health monitoring and predictive maintenance</li>
+                                <li>Object detection and obstacle avoidance visualization</li>
+                                <li>GPS-based movement tracking</li>
+                            </ul>
+
+                            <h4>Technical Implementation</h4>
+                            <p>The dashboard integrates with ROS (Robot Operating System) to collect telemetry data from Boston Dynamics Spot and Clearpath robots. It uses OpenCV and Python for real-time object detection and LiDAR for obstacle detection,
+                                presenting all data through an interactive Dash interface.</p>
+
+                            <h4>Outcomes</h4>
+                            < <p>Enhanced situational awareness for military operations, reduced robot downtime by 30%, and improved mission planning through predictive analytics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="ml-ai data-engineering">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/projects/airbnb.jpg" alt="AirbnbLense">
+                    </div>
+                    <div class="project-info">
+                        <h3>AirbnbLense – Personalized Recommendation System</h3>
+                        <div class="project-meta">
+                            <span class="project-date">February 2024</span>
+                            <span class="project-type">Recommendation Engine</span>
+                        </div>
+                        <p>A sophisticated recommendation engine that combines structured and unstructured data to provide personalized Airbnb listing suggestions.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenAI API</span>
+                            <span>Computer Vision</span>
+                            <span>Tableau</span>
+                            <span>Big Data</span>
+                        </div>
+                        <div class="project-details">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Image-based style and aesthetic analysis</li>
+                                <li>Personalized recommendations based on user preferences</li>
+                                <li>Processing of 160MB of CSV data and 130GB of images</li>
+                                <li>Interactive user interface for exploring listings</li>
+                            </ul>
+
+                            <h4>Technical Implementation</h4>
+                            <p>Built a recommendation engine that processes both structured data (CSV files) and unstructured data (images) using computer vision models to analyze listing images for style, color, and object recognition. The system uses advanced
+                                algorithms to match user preferences with visual and textual features of listings.</p>
+
+                            <h4>Outcomes</h4>
+                            <p>Reduced Airbnb bounce rates by 20% and improved engagement by 40% through tailored recommendations, enhancing the overall user experience and booking conversion rates.</p>
+
+                            <div class="project-links">
+                                <a href="https://github.com/HarshShroff/AirbnbLense" target="_blank" class="btn small"><i class="fab fa-github"></i> View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="visualization ml-ai">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/projects/cyclist.jpg" alt="Cyclists' Performance Dashboard">
+                    </div>
+                    <div class="project-info">
+                        <h3>Cyclists' Performance Dashboard</h3>
+                        <div class="project-meta">
+                            <span class="project-date">October 2023</span>
+                            <span class="project-type">Data Visualization</span>
+                        </div>
+                        <p>An interactive dashboard that tracks real-time cyclist performance metrics, providing personalized training insights and predictive analytics.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Dash</span>
+                            <span>Seaborn</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="project-details">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Real-time performance tracking</li>
+                                <li>Personalized training recommendations</li>
+                                <li>Predictive analytics for performance optimization</li>
+                                <li>Interactive data visualization</li>
+                            </ul>
+
+                            <h4>Technical Implementation</h4>
+                            <p>Developed using Python's Dash framework for interactive visualization and Seaborn for statistical graphics. The dashboard integrates machine learning models to analyze performance data and generate personalized training recommendations
+                                based on historical patterns and athlete-specific metrics.</p>
+
+                            <h4>Outcomes</h4>
+                            <p>Improved training efficiency by 20% through data-driven insights, enabling athletes to focus on specific areas for improvement and optimize their training regimens.</p>
+
+                            <div class="project-links">
+                                <a href="https://github.com/HarshShroff/CyclistDashboard" target="_blank" class="btn small"><i class="fab fa-github"></i> View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="ml-ai">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/projects/fish-fillet.jpg" alt="Fish Fillet Color Grading">
+                    </div>
+                    <div class="project-info">
+                        <h3>Fish Fillet Color Grading System</h3>
+                        <div class="project-meta">
+                            <span class="project-date">December 2023</span>
+                            <span class="project-type">Computer Vision</span>
+                        </div>
+                        <p>An AI-powered system for grading fish fillet color in aquaculture, deployed on Raspberry Pi for real-time assessment.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>YOLOv8</span>
+                            <span>Raspberry Pi</span>
+                            <span>3D Printing</span>
+                        </div>
+                        <div class="project-details">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Automated color grading with 92% accuracy</li>
+                                <li>Portable, 3D-printed case for field deployment</li>
+                                <li>Real-time processing on edge devices</li>
+                                <li>Integration with aquaculture management systems</li>
+                            </ul>
+
+                            <h4>Technical Implementation</h4>
+                            <p>Utilized Python, OpenCV, and YOLOv8 Classifier model deployed on Raspberry Pi 4 to analyze fish fillet images in real-time. The system was housed in a custom-designed 3D printed case for portability and durability in aquaculture
+                                environments.
+                            </p>
+
+                            <h4>Outcomes</h4>
+                            <p>Achieved 92% accuracy in color grading, significantly improving quality control in aquaculture operations and contributing to research in precision aquaculture and food safety.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="enhanced-footer">
+        <div class="footer-container">
+            <!-- Contact Information Section -->
+            <div class="footer-section contact-section">
+                <h3>Contact Me</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:harshrofff@gmail.com">harshrofff@gmail.com</a></li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+16674645255">667-464-5255</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i>United States</li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/harshroff/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/HarshShroff/" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                    <a href="mailto:harshrofff@gmail.com" aria-label="Email Me"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section links-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Resume Download Section -->
+            <div class="footer-section download-section">
+                <h3>Download Resume</h3>
+                <p>Get a copy of my detailed resume to learn more about my experience in AI/ML, data science, and robotics.</p>
+                <a href="assets/docs/Harsh_Shroff_Resume.pdf" class="btn footer-btn" download><i class="fas fa-download"></i> Download PDF</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Harsh Shroff. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/projects.js"></script>
+
+    <!-- <nav class="mobile-nav">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i><span>About</span></a></li>
+            <li><a href="projects.html"><i class="fas fa-code"></i><span>Projects</span></a></li>
+            <li><a href="resume.html"><i class="fas fa-file-alt"></i><span>Resume</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+        </ul>
+    </nav> -->
+
+</body>
+
+</html>
