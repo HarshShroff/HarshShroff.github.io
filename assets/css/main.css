@@ -745,19 +745,26 @@ nav ul li a.active:after {
 
 /* Footer */
 
+
+/* The main footer container uses the .enhanced-footer class */
+
+
+/* The footer tag itself might not be strictly necessary if .enhanced-footer is always used */
+
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
+    /* Changed from fixed */
     text-align: center;
     background-color: var(--bg-color);
+    /* Kept for potential fallback? Review if needed */
     font-size: 0.8rem;
     z-index: 100;
     border-top: 1px solid var(--border-color);
+    /* This might conflict with .enhanced-footer border */
 }
 
 .footer-content {
+    /* This class seems unused, .footer-container is used in .enhanced-footer */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -954,7 +961,11 @@ footer {
     }
 }
 
-@keyframes blink {
+
+/* Removed duplicate @keyframes blink */
+
+
+/* @keyframes blink {
     0%,
     100% {
         opacity: 1;
@@ -962,7 +973,7 @@ footer {
     50% {
         opacity: 0;
     }
-}
+} */
 
 
 /* Download Section */
@@ -2060,225 +2071,29 @@ body.dark-mode h1 {
         margin-right: 0;
         margin-bottom: 1rem;
     }
-}
-
-@media (max-width: 768px) {
+    /* Combined rules from other @media (max-width: 768px) blocks */
     .contact-cards {
         flex-wrap: wrap;
-        /* Allow wrapping on smaller screens */
         gap: 1rem;
-        /* Reduce spacing between cards */
         justify-content: center;
-        /* Center the cards */
     }
     .contact-card {
         flex-basis: calc(50% - 1rem);
-        /* Two cards per row */
         max-width: none;
-        /* Remove max-width constraint */
         margin-bottom: 1rem;
     }
-}
-
-@media (max-width: 480px) {
-    .contact-card {
-        flex-basis: 100%;
-        /* Single card per row on very small screens */
-        margin-bottom: 1rem;
+    .projects-grid {
+        /* Moved from the duplicate block below */
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
-}
-
-
-/* Enhanced Footer Styles - Bottom of Page Only */
-
-.enhanced-footer {
-    background-color: var(--card-bg);
-    border-top: 1px solid var(--border-color);
-    padding: 3rem 0 0 0;
-    margin-top: 4rem;
-    color: var(--text-color);
-    position: relative;
-    /* Not fixed */
-    bottom: auto;
-    /* Not fixed */
-}
-
-
-/* Remove the fixed footer styles */
-
-footer {
-    position: relative;
-    /* Changed from fixed */
-    bottom: auto;
-    /* Changed from 0 */
-    left: 0;
-    right: 0;
-    text-align: center;
-    background-color: var(--bg-color);
-    font-size: 0.8rem;
-    z-index: 100;
-    border-top: 1px solid var(--border-color);
-}
-
-
-/* Rest of the footer styles remain the same */
-
-.footer-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 0 2rem 2rem 2rem;
-}
-
-.footer-section {
-    padding: 0 1rem;
-}
-
-.footer-section h3 {
-    position: relative;
-    padding-bottom: 0.8rem;
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-}
-
-.footer-section h3::after {
-    content: '';
-    position: absolute;
-    /* Added position */
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background: var(--primary-color);
-    border-radius: 2px;
-}
-
-
-/* Contact Section */
-
-.contact-list {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1.5rem;
-}
-
-.contact-list li {
-    margin-bottom: 0.8rem;
-    display: flex;
-    align-items: center;
-}
-
-.contact-list li i {
-    margin-right: 0.8rem;
-    color: var(--primary-color);
-    width: 20px;
-    text-align: center;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--bg-color);
-    color: var(--primary-color);
-    transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
-}
-
-.social-links a:hover {
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-    transform: translateY(-3px);
-}
-
-
-/* Navigation Links */
-
-.footer-nav {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-nav li {
-    margin-bottom: 0.8rem;
-}
-
-.footer-nav a {
-    color: var(--text-color);
-    transition: all 0.3s ease;
-    display: inline-block;
-    position: relative;
-}
-
-.footer-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: width 0.3s ease;
-}
-
-.footer-nav a:hover {
-    color: var(--primary-color);
-}
-
-.footer-nav a:hover::after {
-    width: 100%;
-}
-
-
-/* Download Section */
-
-.download-section p {
-    margin-bottom: 1.5rem;
-}
-
-.footer-btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    border-radius: var(--border-radius);
-    background-color: var(--primary-color);
-    color: white;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    text-align: center;
-    border: none;
-}
-
-.footer-btn:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Footer Bottom */
-
-.footer-bottom {
-    background-color: rgba(0, 0, 0, 0.05);
-    padding: 1rem 0;
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-
-/* Responsive Adjustments */
-
-@media (max-width: 768px) {
+    .project-card-resume {
+        /* Moved from the duplicate block below */
+        padding: 1rem;
+        box-shadow: var(--shadow-md);
+        border-radius: var(--border-radius);
+    }
+    /* Footer adjustments from the deleted block */
     .footer-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -2293,32 +2108,23 @@ footer {
     .social-links {
         justify-content: center;
     }
-    /* Adjust padding for mobile navigation */
     footer {
+        /* This rule might need review depending on mobile nav usage */
         padding-bottom: 10px;
     }
-    /* Only if you're using mobile navigation */
     .mobile-nav+.enhanced-footer {
+        /* This rule might need review depending on mobile nav usage */
         margin-bottom: 60px;
-        /* Space for mobile nav */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card {
+        flex-basis: 100%;
+        /* Single card per row on very small screens */
+        margin-bottom: 1rem;
     }
 }
 
 
-/* Responsive Adjustments for Mobile View */
-
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-        /* Single column layout on smaller screens */
-        gap: 1.5rem;
-        /* Reduce spacing between cards */
-    }
-    .project-card-resume {
-        padding: 1rem;
-        /* Adjust padding for smaller screens */
-        box-shadow: var(--shadow-md);
-        /* Slightly lighter shadow */
-        border-radius: var(--border-radius);
-    }
-}
+/* Removed the large duplicated footer block and the final duplicate @media query */

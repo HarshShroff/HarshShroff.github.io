@@ -3,58 +3,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Project filtering
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectItems = document.querySelectorAll('.project-item');
-
-    // if (filterButtons.length > 0 && projectItems.length > 0) {
-    //     filterButtons.forEach(button => {
-    //         button.addEventListener('click', function() {
-    //             // Remove active class from all buttons
-    //             filterButtons.forEach(btn => btn.classList.remove('active'));
-
-    //             // Add active class to clicked button
-    //             this.classList.add('active');
-
-    //             // Get filter value
-    //             const filterValue = this.getAttribute('data-filter');
-
-    //             // Filter projects
-    //             projectItems.forEach(item => {
-    //                 if (filterValue === 'all') {
-    //                     item.style.display = 'block';
-
-    //                     // Add animation
-    //                     setTimeout(() => {
-    //                         item.style.opacity = '1';
-    //                         item.style.transform = 'translateY(0)';
-    //                     }, 100);
-    //                 } else {
-    //                     const categories = item.getAttribute('data-category').split(' ');
-
-    //                     if (categories.includes(filterValue)) {
-    //                         item.style.display = 'block';
-
-    //                         // Add animation
-    //                         setTimeout(() => {
-    //                             item.style.opacity = '1';
-    //                             item.style.transform = 'translateY(0)';
-    //                         }, 100);
-    //                     } else {
-    //                         item.style.opacity = '0';
-    //                         item.style.transform = 'translateY(20px)';
-
-    //                         // Hide after animation
-    //                         setTimeout(() => {
-    //                             item.style.display = 'none';
-    //                         }, 300);
-    //                     }
-    //                 }
-    //             });
-    //         });
-    //     });
-    // }
+    const projectItems = document.querySelectorAll('.project-item'); // Assuming .project-item exists for filtering targets
 
     // Enhanced Project Filtering with Animations
-
     if (filterButtons.length > 0 && projectItems.length > 0) {
         // Show all projects initially with staggered animation
         projectItems.forEach((item, index) => {

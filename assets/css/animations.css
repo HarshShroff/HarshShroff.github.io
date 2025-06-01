@@ -1,46 +1,11 @@
     /* Animations CSS File */
-    /* Floating animation for elements */
-    
-    @keyframes float {
-        0% {
-            transform: translateY(0px);
-        }
-        50% {
-            transform: translateY(-20px);
-        }
-        100% {
-            transform: translateY(0px);
-        }
-    }
-    /* Typing cursor animation */
-    
-    @keyframes blink {
-        0%,
-        100% {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0;
-        }
-    }
-    /* Neural network animation */
+    /* Note: @keyframes float, blink, fadeIn are defined in main.css */
+    /* Neural network animation (Uses 'float' keyframe from main.css) */
     
     .neural-network {
         animation: float 6s ease-in-out infinite;
     }
-    /* Fade-in animation */
-    
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    /* Pulse animation for buttons */
+    /* Pulse animation for buttons (Unique to this file) */
     
     @keyframes pulse {
         0% {
@@ -53,85 +18,17 @@
             box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
         }
     }
-    /* Apply animations to elements */
-    
-    .hero-content h1,
-    .hero-content .typed-container,
-    .hero-content .hero-description,
-    .hero-content .hero-cta {
-        animation: fadeIn 1s ease-out forwards;
-        opacity: 0;
-    }
-    
-    .hero-content h1 {
-        animation-delay: 0.2s;
-    }
-    
-    .hero-content .typed-container {
-        animation-delay: 0.4s;
-    }
-    
-    .hero-content .hero-description {
-        animation-delay: 0.6s;
-    }
-    
-    .hero-content .hero-cta {
-        animation-delay: 0.8s;
-    }
+    /* Apply unique animations */
+    /* Note: Hero content fadeIn animations are in main.css */
+    /* Note: Timeline item visibility transitions are in main.css */
+    /* Note: Skill card hover effects (transform, shadow, icon scale/color) are in main.css */
+    /* Note: Project card hover effects (transform, shadow, image scale) are in main.css */
     
     .btn.primary:hover {
         animation: pulse 1.5s infinite;
+        /* Apply pulse animation on hover */
     }
-    /* Timeline animations */
-    
-    .timeline-item {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.5s ease;
-    }
-    
-    .timeline-item.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    /* Skill card hover effects */
-    
-    .skill-card {
-        transition: all 0.3s ease;
-    }
-    
-    .skill-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-    
-    .skill-icon {
-        transition: all 0.3s ease;
-    }
-    
-    .skill-card:hover .skill-icon {
-        transform: scale(1.2);
-        color: var(--accent-color);
-    }
-    /* Project card hover effects */
-    
-    .project-card {
-        transition: all 0.3s ease;
-    }
-    
-    .project-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-    
-    .project-image img {
-        transition: all 0.5s ease;
-    }
-    
-    .project-card:hover .project-image img {
-        transform: scale(1.05);
-    }
-    /* Profile image animation */
+    /* Profile image animation / hover effect */
     
     .profile-container {
         position: relative;
