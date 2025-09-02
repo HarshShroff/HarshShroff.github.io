@@ -43,11 +43,22 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
+            // Simple validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !message) {
+                console.error('Please fill in all required fields.');
+                // Add a user-facing error message here instead of console.log
+                return;
+            }
+
             const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
+                name: name,
+                email: email,
                 subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
+                message: message
             };
 
             // Placeholder for actual form submission logic (e.g., fetch API)
@@ -80,45 +91,50 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Custom Cursor Effect ---
-    const cursor = document.createElement('div');
-    cursor.className = 'cursor-effect';
-    document.body.appendChild(cursor);
-    let cursorVisible = false;
+    // Note: This feature can sometimes interfere with user experience on mobile devices.
+    // It's a stylistic choice, but can be disabled for a cleaner experience on smaller screens.
+    if (!/Mobi|Android/i.test(navigator.userAgent)) {
+        const cursor = document.createElement('div');
+        cursor.className = 'cursor-effect';
+        document.body.appendChild(cursor);
+        let cursorVisible = false;
 
-    document.addEventListener('mousemove', function(e) {
-        if (!cursorVisible) {
-            cursor.style.display = 'block';
-            cursorVisible = true;
-        }
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-
-    document.addEventListener('mouseleave', function() {
-        cursor.style.display = 'none';
-        cursorVisible = false;
-    });
-
-    document.addEventListener('mouseenter', function() {
-        if (!cursorVisible) {
-            cursor.style.display = 'block';
-            cursorVisible = true;
-        }
-    });
-
-    const hoverables = document.querySelectorAll('a, button, .btn, .project-card, .skill-card, .theme-toggle, .hamburger');
-    hoverables.forEach(hoverable => {
-        hoverable.addEventListener('mouseenter', function() {
-            cursor.style.width = '50px';
-            cursor.style.height = '50px';
-            cursor.style.backgroundColor = 'rgba(139, 92, 246, 0.2)';
+        document.addEventListener('mousemove', function(e) {
+            if (!cursorVisible) {
+                cursor.style.display = 'block';
+                cursorVisible = true;
+            }
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
         });
-        hoverable.addEventListener('mouseleave', function() {
-            cursor.style.width = '20px';
-            cursor.style.height = '20px';
-            cursor.style.backgroundColor = 'rgba(139, 92, 246, 0.5)';
+
+        document.addEventListener('mouseleave', function() {
+            cursor.style.display = 'none';
+            cursorVisible = false;
         });
-    });
+
+        document.addEventListener('mouseenter', function() {
+            if (!cursorVisible) {
+                cursor.style.display = 'block';
+                cursorVisible = true;
+            }
+        });
+
+        const hoverables = document.querySelectorAll('a, button, .btn, .project-card, .skill-card, .theme-toggle, .hamburger');
+        hoverables.forEach(hoverable => {
+            hoverable.addEventListener('mouseenter', function() {
+                cursor.style.width = '50px';
+                cursor.style.height = '50px';
+                cursor.style.backgroundColor = 'rgba(139, 92, 246, 0.2)';
+            });
+            hoverable.addEventListener('mouseleave', function() {
+                cursor.style.width = '20px';
+                cursor.style.height = '20px';
+                cursor.style.backgroundColor = 'rgba(139, 92, 246, 0.5)';
+            });
+        });
+    }
+
 
     // --- Smooth Scrolling for Anchor Links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -127,13 +143,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetId && targetId !== '#') {
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    e.preventDefault(); // Prevent default only if target exists
+                    e.preventDefault();
                     targetElement.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
 
-                    // Close mobile menu if open and active
+                    // Close mobile menu if open
                     if (hamburger && navMenu && hamburger.classList.contains('active')) {
                         hamburger.classList.remove('active');
                         navMenu.classList.remove('active');
@@ -144,36 +160,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // --- Theme Toggle Functionality ---
-    const themeToggle = document.createElement('div');
-    themeToggle.className = 'theme-toggle';
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>'; // Default to dark mode icon
-    document.body.appendChild(themeToggle);
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (themeToggle) {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        // Apply theme: saved preference > OS preference > default (dark)
+        if (savedTheme === 'light' || (savedTheme === null && !prefersDark)) {
+            document.body.classList.add('light-mode');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
 
-    // Apply theme: saved preference > OS preference > default (dark)
-    if (savedTheme === 'light') {
-        document.body.classList.add('light-mode');
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-    } else if (savedTheme === 'dark') {
-        // Already default, no class needed
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-    } else if (!prefersDark) { // If no saved theme and OS prefers light
-        document.body.classList.add('light-mode');
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-    } // Otherwise, default dark is fine
-
-    themeToggle.addEventListener('click', function() {
-        document.body.classList.toggle('light-mode');
-        const isLightMode = document.body.classList.contains('light-mode');
-        themeToggle.innerHTML = isLightMode ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
-        localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
-    });
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('light-mode');
+            const isLightMode = document.body.classList.contains('light-mode');
+            themeToggle.innerHTML = isLightMode ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+            localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+        });
+    }
 
     // --- Scroll-Triggered Animations ---
     const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in');
-    const staggerItems = document.querySelectorAll('.stagger-item');
     const timelineItems = document.querySelectorAll('.timeline-item');
     const skillBars = document.querySelectorAll('.skill-level');
 
@@ -198,7 +207,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Skill bar animations
         skillBars.forEach(bar => {
-            // Check if already animated to prevent re-triggering
             if (!bar.style.width || bar.style.width === '0px' || bar.style.width === '0%') {
                 if (bar.getBoundingClientRect().top < screenPositionSkills) {
                     const width = bar.getAttribute('data-width');
@@ -208,148 +216,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-
-        // Staggered animations (Group by container)
-        const staggerContainers = {};
-        staggerItems.forEach(item => {
-            const container = item.closest('.stagger-container'); // Assuming parent has this class
-            if (container) {
-                const containerId = container.id || container.dataset.staggerId || Math.random().toString(36).substring(7); // Need a way to identify container
-                if (!container.id && !container.dataset.staggerId) container.dataset.staggerId = containerId; // Assign temp ID if needed
-
-                if (!staggerContainers[containerId]) {
-                    staggerContainers[containerId] = {
-                        container: container,
-                        items: [],
-                        triggered: false // Flag to prevent re-triggering
-                    };
-                }
-                staggerContainers[containerId].items.push(item);
-            }
-        });
-
-        for (const id in staggerContainers) {
-            const containerData = staggerContainers[id];
-            // Trigger only if container is visible and not already triggered
-            if (!containerData.triggered && containerData.container.getBoundingClientRect().top < screenPositionAnimate) {
-                containerData.items.forEach((item, index) => {
-                    setTimeout(() => {
-                        item.classList.add('visible');
-                    }, index * 100); // 100ms stagger delay
-                });
-                containerData.triggered = true; // Mark as triggered
-            }
-        }
     };
 
-    // Initial check + scroll listener for animations
-    animateOnScroll(); // Run once on load
+    animateOnScroll();
     window.addEventListener('scroll', animateOnScroll);
 
-    // --- Lazy Loading Images ---
-    const lazyImages = document.querySelectorAll('img.lazy-image, img[loading="lazy"]'); // Select images marked for lazy loading
-    if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries, observerInstance) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    const src = img.dataset.src || img.src; // Use data-src if available, else src
-
-                    // Check if it's the placeholder or already loaded
-                    if (img.src !== src) {
-                        img.src = src;
-                        img.onload = () => {
-                            img.classList.add('loaded'); // Add class when fully loaded
-                            img.removeAttribute('data-src'); // Clean up data attribute
-                        };
-                        img.onerror = () => {
-                            console.error(`Failed to load image: ${src}`);
-                            img.classList.add('error'); // Optional: Add error class
-                        }
-                    }
-                    observerInstance.unobserve(img); // Stop observing once triggered
-                }
-            });
-        }, { rootMargin: '50px 0px 50px 0px' }); // Trigger slightly before entering viewport
-
-        lazyImages.forEach(img => {
-            // Ensure images have a data-src if src is a placeholder, or just rely on native lazy loading
-            if (!img.src || img.src.startsWith('data:image/')) { // If src is missing or is a placeholder
-                if (img.dataset.src) {
-                    observer.observe(img);
-                }
-            } else if (img.loading === 'lazy') {
-                // Let native lazy loading handle it, but maybe add 'loaded' class on load
-                img.onload = () => img.classList.add('loaded');
-                img.onerror = () => img.classList.add('error');
-            } else if (img.dataset.src) { // If src is set but data-src is preferred
-                img.src = ""; // Clear src to force loading from data-src via observer
-                observer.observe(img);
-            }
-            // If img.src is valid and no data-src/lazy attribute, it loads normally.
-        });
-    } else {
-        // Fallback for browsers without IntersectionObserver (load all images)
-        lazyImages.forEach(img => {
-            const src = img.dataset.src || img.src;
-            if (img.src !== src) {
-                img.src = src;
-                img.onload = () => img.classList.add('loaded');
-            }
-        });
-    }
-
-    // --- Project Card Expansion ---
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-        // Find the clickable header/image area if details shouldn't trigger toggle
-        const toggleArea = card.querySelector('.project-image') || card.querySelector('.project-info h3') || card; // Adjust selector as needed
-        toggleArea.addEventListener('click', (e) => {
-            // Prevent toggling if a link inside the card was clicked
-            if (e.target.closest('a')) {
-                return;
-            }
-            card.classList.toggle('expanded');
-        });
-        // Add keyboard accessibility
-        toggleArea.setAttribute('role', 'button');
-        toggleArea.setAttribute('tabindex', '0');
-        toggleArea.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                card.classList.toggle('expanded');
-            }
-        });
-    });
-
-    // --- Project Tap Hint ---
-    const tapHint = document.getElementById('tap-hint');
-    const closeHintButton = document.getElementById('close-tap-hint');
-    const hintKey = 'projectTapHintSeen';
-
-    if (tapHint && closeHintButton) {
-        // Show only if not seen before and on touch devices (simple check)
-        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-        if (isTouchDevice && localStorage.getItem(hintKey) !== 'true') {
-            tapHint.style.display = 'flex';
-        } else {
-            tapHint.style.display = 'none';
-        }
-
-        // Close button functionality
-        closeHintButton.addEventListener('click', function() {
-            tapHint.style.display = 'none';
-            localStorage.setItem(hintKey, 'true');
-        });
-
-        // Hide on first card interaction (tap/click)
+    // --- Project Card Expansion on Projects Page ---
+    const projectCards = document.querySelectorAll('.project-item');
+    if (projectCards.length > 0) {
         projectCards.forEach(card => {
-            card.addEventListener('click', function() {
-                if (tapHint.style.display !== 'none') {
-                    tapHint.style.display = 'none';
-                    localStorage.setItem(hintKey, 'true');
-                }
-            }, { once: true }); // Only need to hide it once
+            const detailsSection = card.querySelector('.project-details');
+            if (detailsSection) {
+                card.addEventListener('click', (e) => {
+                    // Prevent toggling if a link inside the card was clicked
+                    if (e.target.closest('a')) {
+                        return;
+                    }
+                    card.classList.toggle('expanded');
+
+                    // Scroll to details if expanded
+                    if (card.classList.contains('expanded')) {
+                        setTimeout(() => {
+                            card.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }, 300);
+                    }
+                });
+            }
         });
     }
 

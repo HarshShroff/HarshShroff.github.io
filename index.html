@@ -21,9 +21,6 @@
     <div id="particles-js"></div>
     <header>
         <div class="logo">
-            <!-- <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM20 7.5C24.142 7.5 27.5 10.858 27.5 15C27.5 19.142 24.142 22.5 20 22.5C15.858 22.5 12.5 19.142 12.5 15C12.5 10.858 15.858 7.5 20 7.5ZM20 35C15.833 35 12.083 33.333 9.583 30.583C9.667 25.292 15 22.5 20 22.5C24.983 22.5 30.333 25.292 30.417 30.583C27.917 33.333 24.167 35 20 35Z" fill="currentColor"/>
-            </svg> -->
             <a href="index.html" class="logo-link" aria-label="Go to Home">
                 <span class="logo-text">Harsh Shroff</span>
             </a>
@@ -31,7 +28,6 @@
         <nav>
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
-                <!-- <li><a href="about.html">About</a></li> -->
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -46,13 +42,12 @@
 
     <main>
         <section class="hero">
-            <!-- <div class="hero-card"> -->
             <div class="hero-content">
                 <h1>Harsh Shroff</h1>
                 <div class="typed-container">
                     <span id="typed"></span>
                 </div>
-                <p class="hero-description">Innovative AI/ML Engineer, Data Scientist, and Data Analyst with expertise in large-scale data processing, machine learning, generative AI, deep learning, and data engineering.</p>
+                <p class="hero-description">Innovating at the intersection of AI, ML, and data. As a specialist in robotics and AI/ML, I build intelligent systems that transform complex data into actionable insights and automate real-world processes.</p>
                 <div class="hero-cta">
                     <a href="projects.html" class="btn primary">View Projects</a>
                     <a href="assets/docs/Harsh_Shroff_Resume.pdf" class="btn secondary" download>Download Resume</a>
@@ -60,10 +55,8 @@
             </div>
             <div class="hero-visual">
                 <div class="neural-network">
-                    <!-- Neural network animation will be handled by CSS -->
                 </div>
             </div>
-            <!-- </div> -->
         </section>
 
         <section class="skills-overview">
@@ -122,14 +115,13 @@
                         </div>
                         <div class="project-info">
                             <h3>Real-Time Infrastructure Risk Assessment</h3>
-                            <p>A web-based application that integrates multiple data sources to assess and visualize real-time risks to transportation infrastructure.</p>
+                            <p>A web application that integrates live traffic and weather data to assess and visualize real-time threats to urban transportation networks. Engineered scalable APIs and interactive maps for city planners.</p>
                             <div class="project-tech">
                                 <span>Python</span>
                                 <span>Flask</span>
-                                <span>PostgreSQL</span>
+                                <span>PostGIS</span>
                                 <span>API Integration</span>
                             </div>
-                            <!-- <a href="projects.html#infrastructure-risk" class="btn small">Learn More</a> -->
                         </div>
                     </div>
                 </a>
@@ -140,13 +132,29 @@
                         </div>
                         <div class="project-info">
                             <h3>Resume Scoring Slack Bot</h3>
-                            <p>LLM-powered bot using Llama and AWS services to automate candidate screening.</p>
+                            <p>An intelligent, LLM-powered bot that automates candidate screening, reducing manual processing time by 60% and improving overall workflow efficiency.</p>
                             <div class="project-tech">
                                 <span>AWS Lambda</span>
                                 <span>LLMs</span>
                                 <span>Python</span>
                             </div>
-                            <!-- <a href="projects.html#resume-bot" class="btn small">Learn More</a> -->
+                        </div>
+                    </div>
+                </a>
+                <a href="projects.html#geospatial">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/projects/geospatial.jpg" alt="Geospatial Analysis Tool">
+                        </div>
+                        <div class="project-info">
+                            <h3>Chatbot-Driven Geospatial Analysis Tool</h3>
+                            <p>Developed a geospatial chatbot using Claude 3.5 and OCR to automate city zoning analysis for urban planners, extracting data from over 2,500 documents.</p>
+                            <div class="project-tech">
+                                <span>AWS</span>
+                                <span>Claude 3.5</span>
+                                <span>Streamlit</span>
+                                <span>GIS</span>
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -155,45 +163,6 @@
                 <a href="projects.html" class="btn secondary">View All Projects</a>
             </div>
         </section>
-
-        <!-- <section class="experience-overview">
-            <h2>Professional Journey</h2>
-            <div class="experience-cards">
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div class="experience-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <div class="experience-title">
-                            <h3>Data Analyst | ML Engineer</h3>
-                            <h4>VITG Corp.</h4>
-                        </div>
-                    </div>
-                    <div class="experience-date">Jun 2024 - Present</div>
-                    <div class="experience-description">
-                        <p>Building AI-powered solutions for automated candidate screening and geospatial analysis.</p>
-                    </div>
-                    <a href="about.html#experience" class="experience-link">Read More</a>
-                </div>
-
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div class="experience-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="experience-title">
-                            <h3>Data Researcher – AI & Robotics</h3>
-                            <h4>UMBC</h4>
-                        </div>
-                    </div>
-                    <div class="experience-date">Mar 2023 – Dec 2024</div>
-                    <div class="experience-description">
-                        <p>Developing AI-powered robotic navigation and human-robot interaction systems.</p>
-                    </div>
-                    <a href="about.html#experience" class="experience-link">Read More</a>
-                </div>
-            </div>
-        </section> -->
     </main>
 
     <footer class="enhanced-footer">
@@ -237,33 +206,10 @@
         </div>
     </footer>
 
-
-
-    <!-- <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Harsh Shroff. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/harshroff/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/HarshShroff/" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:harshrofff@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </footer> -->
-
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/particles.js"></script>
-
-    <!-- <nav class="mobile-nav">
-        <ul>
-            <li><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
-            <li><a href="about.html"><i class="fas fa-user"></i><span>About</span></a></li>
-            <li><a href="projects.html"><i class="fas fa-code"></i><span>Projects</span></a></li>
-            <li><a href="resume.html"><i class="fas fa-file-alt"></i><span>Resume</span></a></li>
-            <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
-        </ul>
-    </nav> -->
 
 </body>
 
