@@ -1,6 +1,7 @@
 // Main JavaScript file
 
 document.addEventListener('DOMContentLoaded', function() {
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // --- Mobile Menu Toggle ---
     const hamburger = document.querySelector('.hamburger');
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Typed.js Initialization (Homepage) ---
-    if (document.getElementById('typed')) {
+    if (document.getElementById('typed') && !prefersReducedMotion) {
         const options = {
             strings: [
                 'AI/ML Engineer',
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Custom Cursor Effect ---
     // Note: This feature can sometimes interfere with user experience on mobile devices.
     // It's a stylistic choice, but can be disabled for a cleaner experience on smaller screens.
-    if (!/Mobi|Android/i.test(navigator.userAgent)) {
+    if (!prefersReducedMotion && !/Mobi|Android/i.test(navigator.userAgent)) {
         const cursor = document.createElement('div');
         cursor.className = 'cursor-effect';
         document.body.appendChild(cursor);
@@ -144,10 +145,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     e.preventDefault();
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    if (prefersReducedMotion) {
+                        targetElement.scrollIntoView();
+                    } else {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
 
                     // Close mobile menu if open
                     if (hamburger && navMenu && hamburger.classList.contains('active')) {

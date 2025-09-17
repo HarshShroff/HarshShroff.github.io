@@ -48,10 +48,13 @@
                 <div class="typed-container">
                     <span id="typed"></span>
                 </div>
-                <p class="hero-description">Innovating at the intersection of AI, ML, and data. As a specialist in robotics and AI/ML, I build intelligent systems that transform complex data into actionable insights and automate real-world processes.</p>
+                <p class="small-text" aria-label="Highlights">Open to Relocation • AWS ML Certified • Published Researcher</p>
+                <div class="small-text" aria-label="What I do">Systems: ROS, Spot, HoloLens • Intelligence: CV, RL, LLMs • Scale: AWS, PostGIS, CI/CD</div>
+                <p class="hero-description">I build production-grade AI systems across robotics and geospatial domains—delivering measurable outcomes like 60% process time reduction and 92% accuracy in real-world deployments.</p>
                 <div class="hero-cta">
                     <a href="projects.html" class="btn primary">View Projects</a>
                     <a href="assets/docs/Harsh_Shroff_Resume.pdf" class="btn secondary" download>Download Resume</a>
+                    <a href="contact.html" class="btn secondary">Contact</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -112,10 +115,13 @@
                 <a href="projects.html#infrastructure-risk">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="assets/img/projects/infrastructure-risk.png" alt="A screenshot of a web application showing a map with color-coded risk assessment for urban transportation infrastructure.">
+                            <img src="assets/img/projects/infrastructure-risk.png" alt="A screenshot of a web application showing a map with color-coded risk assessment for urban transportation infrastructure." loading="lazy" decoding="async">
                         </div>
                         <div class="project-info">
                             <h3>Real-Time Infrastructure Risk Assessment</h3>
+                            <div class="project-meta">
+                                <span class="impact-metric">City Planners • Real-time</span>
+                            </div>
                             <p>A web application that integrates live traffic and weather data to assess and visualize real-time threats to urban transportation networks. Engineered scalable APIs and interactive maps for city planners.</p>
                             <div class="project-tech">
                                 <span>Python</span>
@@ -129,11 +135,14 @@
                 <a href="projects.html#resume-bot">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="assets/img/projects/resume-bot.jpg" alt="A robot with antennas sifting through a large stack of paper resumes on a desk, symbolizing automated resume screening.">
+                            <img src="assets/img/projects/resume-bot.jpg" alt="A robot with antennas sifting through a large stack of paper resumes on a desk, symbolizing automated resume screening." loading="lazy" decoding="async">
                         </div>
                         <div class="project-info">
-                            <h3>Resume Scoring Slack Bot</h3>
-                            <p>An intelligent, LLM-powered bot that automates candidate screening, reducing manual processing time by 60% and improving overall workflow efficiency.</p>
+                            <h3>LLM Resume Screening System (Slack)</h3>
+                            <div class="project-meta">
+                                <span class="impact-metric">60% Time Saved</span>
+                            </div>
+                            <p>Enterprise LLM-based screening on AWS (Lambda/EC2/S3) integrated with Slack. Cut screening time by 60% and standardized evaluation quality.</p>
                             <div class="project-tech">
                                 <span>AWS Lambda</span>
                                 <span>LLMs</span>
@@ -145,10 +154,13 @@
                 <a href="projects.html#geospatial">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="assets/img/projects/geospatial.jpg" alt="An aerial view of an urban area with distinct green conservation zones and city infrastructure, representing a geospatial analysis tool.">
+                            <img src="assets/img/projects/geospatial.jpg" alt="An aerial view of an urban area with distinct green conservation zones and city infrastructure, representing a geospatial analysis tool." loading="lazy" decoding="async">
                         </div>
                         <div class="project-info">
                             <h3>Chatbot-Driven Geospatial Analysis Tool</h3>
+                            <div class="project-meta">
+                                <span class="impact-metric">40% Efficiency Gain</span>
+                            </div>
                             <p>Developed a geospatial chatbot using Claude 3.5 and OCR to automate city zoning analysis for urban planners, extracting data from over 2,500 documents.</p>
                             <div class="project-tech">
                                 <span>AWS</span>
@@ -211,6 +223,9 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/particles.js"></script>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-sun"></i></div>
 
 </body>
 

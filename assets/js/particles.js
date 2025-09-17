@@ -1,3 +1,5 @@
+// Respect reduced motion preference
+if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
 particlesJS('particles-js', {
     "particles": {
         "number": {
@@ -103,3 +105,4 @@ particlesJS('particles-js', {
     },
     "retina_detect": true
 });
+}

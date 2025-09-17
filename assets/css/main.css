@@ -8,9 +8,10 @@
     --secondary-color: #666666;
     --secondary-light: #777777;
     --secondary-dark: #555555;
-    --accent-color: #999999;
-    --accent-light: #B0B0B0;
-    --accent-dark: #808080;
+    /* Teal Accent */
+    --accent-color: #14B8A6;
+    --accent-light: #2DD4BF;
+    --accent-dark: #0E9386;
     --text-color: #E0E0E0;
     --text-secondary: #B0B0B0;
     --bg-color: #121212;
@@ -27,6 +28,36 @@
     --font-code: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
+/* Mobile-only Quick Actions Bar (Resume) */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 72px; /* prevent overlap with sticky bar */
+    }
+    .quick-actions-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: env(safe-area-inset-bottom, 0);
+        background: var(--card-bg);
+        border-top: 1px solid var(--border-color);
+        box-shadow: 0 -6px 16px rgba(0,0,0,0.15);
+        padding: 0.5rem 1rem calc(0.5rem + env(safe-area-inset-bottom, 0));
+        display: flex;
+        justify-content: center;
+        gap: 0.75rem;
+        z-index: 1100;
+    }
+    .quick-actions-bar .btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    .quick-actions-bar .btn.primary {
+        background: var(--accent-color);
+        color: #fff;
+        border: none;
+    }
+}
+
 body.light-mode {
     /* Light Theme Variables */
     --primary-color: #666666;
@@ -35,9 +66,10 @@ body.light-mode {
     --secondary-color: #888888;
     --secondary-light: #999999;
     --secondary-dark: #777777;
-    --accent-color: #777777;
-    --accent-light: #888888;
-    --accent-dark: #666666;
+    /* Teal Accent (Light) */
+    --accent-color: #0F766E;
+    --accent-light: #14B8A6;
+    --accent-dark: #0B5E58;
     --text-color: #121212;
     --text-secondary: #444444;
     --bg-color: #F5F5F5;
@@ -99,14 +131,14 @@ h6 {
 }
 
 h1 {
-    background: linear-gradient(135deg, var(--text-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--text-color), var(--accent-light));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 h2:after {
-    background: linear-gradient(to right, var(--primary-color), var(--primary-light));
+    background: linear-gradient(to right, var(--accent-dark), var(--accent-light));
 }
 
 p,
@@ -135,7 +167,7 @@ li,
 }
 
 .btn.primary {
-    background: var(--primary-color);
+    background: var(--accent-color);
     color: var(--bg-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     border: none;
@@ -143,8 +175,8 @@ li,
 
 .btn.secondary {
     background-color: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
 }
 
 .btn.small {
@@ -155,11 +187,11 @@ li,
 .btn.primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-    background: var(--primary-light);
+    background: var(--accent-light);
 }
 
 .btn.secondary:hover {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: var(--bg-color);
 }
 
@@ -254,7 +286,7 @@ header {
     font-family: 'Dancing Script', cursive;
     font-size: 2.2rem;
     font-weight: 700;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(90deg, var(--accent-dark), var(--accent-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -283,13 +315,17 @@ nav ul li a:after {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    background: linear-gradient(to right, var(--accent-dark), var(--accent-light));
     transition: width 0.3s;
 }
 
 nav ul li a:hover:after,
 nav ul li a.active:after {
     width: 100%;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
 }
 
 .hamburger {
@@ -305,6 +341,47 @@ nav ul li a.active:after {
     margin: 5px 0;
     transition: var(--transition);
 }
+.hamburger.active span {
+    background-color: var(--accent-color);
+}
+
+/* Accessibility: visible focus outlines */
+a:focus,
+button:focus,
+.btn:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Mobile Navigation (<= 768px) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        margin-left: 1rem;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        left: 5%;
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        padding: 1rem 1.2rem;
+        box-shadow: var(--shadow-md);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
 
 
 /* Scroll Progress */
@@ -314,7 +391,7 @@ nav ul li a.active:after {
     top: 0;
     left: 0;
     height: 3px;
-    background: var(--primary-color);
+    background: var(--accent-color);
     width: 0%;
     z-index: 1001;
     transition: width 0.1s ease;
@@ -360,7 +437,7 @@ nav ul li a.active:after {
 .interest-card,
 .achievement-card,
 .contact-card {
-    border-left: 3px solid var(--primary-color);
+    border-left: 3px solid var(--accent-color);
 }
 
 .skill-card:hover,
@@ -372,8 +449,8 @@ nav ul li a.active:after {
 .contact-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-md);
-    border-color: var(--primary-light);
-    border-left: 3px solid var(--primary-light);
+    border-color: var(--accent-light);
+    border-left: 3px solid var(--accent-light);
 }
 
 .connect-card {
@@ -484,13 +561,13 @@ nav ul li a.active:after {
 .skill-icon {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: var(--primary-color);
+    color: var(--accent-color);
     transition: var(--transition);
 }
 
 .skill-card:hover .skill-icon {
     transform: scale(1.2);
-    color: var(--accent-color);
+    color: var(--accent-light);
 }
 
 .skill-tags {
@@ -504,7 +581,7 @@ nav ul li a.active:after {
 
 .skill-tags span,
 .project-tech span {
-    background-color: rgba(136, 136, 136, 0.1);
+    background-color: rgba(20, 184, 166, 0.1);
     color: var(--primary-light);
     border: 1px solid var(--border-color);
     padding: 0.3rem 0.8rem;
@@ -513,8 +590,15 @@ nav ul li a.active:after {
     font-weight: 500;
 }
 
+.skill-tags span:hover,
+.project-tech span:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-color: rgba(20, 184, 166, 0.15);
+}
+
 .impact-metric {
-    color: var(--primary-light);
+    color: var(--accent-light);
 }
 
 
@@ -535,6 +619,29 @@ nav ul li a.active:after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+}
+
+/* Project filters */
+.project-filters {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin: 1rem 0 2rem 0;
+}
+.project-filters .filter-btn {
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    background: var(--card-bg);
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.project-filters .filter-btn:hover,
+.project-filters .filter-btn.active {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    border-color: var(--accent-color);
 }
 
 @media (max-width: 900px) {
@@ -573,8 +680,8 @@ nav ul li a.active:after {
     left: 50%;
     transform: translateX(-50%);
     background: var(--card-bg, #222);
-    color: var(--primary-color, #A8DADC);
-    border: 1.5px solid var(--primary-color, #A8DADC);
+    color: var(--accent-color, #14B8A6);
+    border: 1.5px solid var(--accent-color, #14B8A6);
     border-radius: 2rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
     padding: 0.7rem 1.5rem 0.7rem 1.2rem;
@@ -593,7 +700,7 @@ nav ul li a.active:after {
 .tap-hint button {
     background: none;
     border: none;
-    color: var(--primary-color, #A8DADC);
+    color: var(--accent-color, #14B8A6);
     font-size: 1.3rem;
     margin-left: 0.7rem;
     cursor: pointer;
@@ -601,7 +708,7 @@ nav ul li a.active:after {
 }
 
 .tap-hint button:hover {
-    color: var(--accent-color, #B39CD0);
+    color: var(--accent-light, #2DD4BF);
 }
 
 @media (max-width: 600px) {
@@ -726,7 +833,7 @@ nav ul li a.active:after {
 
 .experience-icon {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--accent-color);
     margin-right: 1rem;
 }
 
@@ -808,7 +915,7 @@ footer {
     left: 0;
     width: 50px;
     height: 3px;
-    background: var(--primary-color);
+    background: var(--accent-color);
     border-radius: 2px;
 }
 
@@ -835,7 +942,7 @@ footer {
 }
 
 .social-links a:hover {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: var(--bg-color);
     transform: translateY(-3px);
 }
@@ -867,8 +974,11 @@ footer {
 
 .theme-toggle i {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--accent-color);
     transition: var(--transition);
+}
+.theme-toggle:hover i {
+    color: var(--accent-light);
 }
 
 
@@ -919,12 +1029,12 @@ footer {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     transition: width 0.3s ease;
 }
 
 .footer-nav a:hover {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .footer-nav a:hover::after {
@@ -945,6 +1055,17 @@ footer {
     transform: translate(-50%, -50%);
     transition: width 0.3s, height 0.3s, background-color 0.3s;
     display: none;
+}
+
+/* Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+    .cursor-effect { display: none !important; }
+    #particles-js { display: none !important; }
 }
 
 
@@ -986,7 +1107,7 @@ footer {
     display: inline-block;
     padding: 0.8rem 1.5rem;
     border-radius: var(--border-radius);
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: white;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -995,7 +1116,7 @@ footer {
 }
 
 .footer-btn:hover {
-    background-color: var(--primary-dark);
+    background-color: var(--accent-dark);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -1174,7 +1295,7 @@ footer {
 .interest-icon {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 
@@ -1201,7 +1322,7 @@ footer {
 
 .achievement-icon {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--accent-color);
     margin-right: 1.5rem;
 }
 
@@ -1231,7 +1352,7 @@ footer {
 
 .badge-icon {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--accent-color);
     margin-bottom: 1rem;
 }
 

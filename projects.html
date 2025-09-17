@@ -63,7 +63,7 @@
             <div class="project-item" data-category="data-engineering visualization" id="infrastructure-risk">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/img/projects/infrastructure-risk.png" alt="Real-Time Infrastructure Risk Assessment">
+                        <img src="assets/img/projects/infrastructure-risk.png" alt="Real-Time Infrastructure Risk Assessment" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>Real-Time Infrastructure Risk Assessment for Transportation Networks</h3>
@@ -100,6 +100,13 @@
                             <div class="project-links">
                                 <a href="https://github.com/HarshShroff/Real-Time-Infrastructure-Risk-Assessment-for-Transportation-Networks" target="_blank" class="btn small"><i class="fab fa-github"></i> View on GitHub</a>
                             </div>
+                            <h4>Case Study</h4>
+                            <ul>
+                                <li><strong>Problem:</strong> City planners lacked a unified, real-time view of multi-source risk (traffic, weather, infrastructure attributes).</li>
+                                <li><strong>Approach:</strong> Flask APIs + PostGIS for spatial scoring; Leaflet UI with dynamic risk layers; integrated OpenWeatherMap and TomTom.</li>
+                                <li><strong>Outcome:</strong> Enabled real-time triage and prioritization of network threats; improved response coordination.</li>
+                                <li><strong>Role:</strong> End-to-end engineering (backend, spatial DB, frontend), deployment, and documentation.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -108,15 +115,15 @@
             <div class="project-item" data-category="ml-ai" id="resume-bot">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/img/projects/resume-bot.jpg" alt="Resume Scoring Bot">
+                        <img src="assets/img/projects/resume-bot.jpg" alt="Resume Scoring Bot" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
-                        <h3>Resume Scoring Slack Bot</h3>
+                        <h3>LLM Resume Screening System (Slack)</h3>
                         <div class="project-meta">
                             <span class="project-date">April 2025</span>
                             <span class="project-type">LLM Application</span>
                         </div>
-                        <p>An intelligent resume screening solution powered by Llama LLM and AWS services that automates candidate evaluation, reducing manual processing by 60%.</p>
+                        <p>Enterprise LLM-based screening on AWS (Lambda/EC2/S3) integrated with Slack. Cut screening time by 60% and standardized evaluation quality.</p>
                         <div class="project-tech">
                             <span>AWS Lambda</span>
                             <span>EC2</span>
@@ -143,6 +150,13 @@
                             <div class="project-links">
                                 <a href="https://github.com/HarshShroff/Resume-Scoring-Bot" target="_blank" class="btn small"><i class="fab fa-github"></i> View on GitHub</a>
                             </div>
+                            <h4>Case Study</h4>
+                            <ul>
+                                <li><strong>Problem:</strong> Manual resume screening slowed hiring and introduced inconsistency across reviewers.</li>
+                                <li><strong>Approach:</strong> AWS Lambda orchestration; Textract OCR; Llama/Claude prompts with job-specific rubrics; Slack for delivery and feedback.</li>
+                                <li><strong>Outcome:</strong> 60% reduction in screening time; improved standardization and auditability.</li>
+                                <li><strong>Role:</strong> Architected cloud workflow, built prompt pipelines, integrated Slack, and productionized evaluation.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -151,7 +165,7 @@
             <div class="project-item" data-category="ml-ai data-engineering" id="geospatial">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/img/projects/geospatial.jpg" alt="Geospatial Analysis Tool">
+                        <img src="assets/img/projects/geospatial.jpg" alt="Geospatial Analysis Tool" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>Chatbot-Driven Geospatial Analysis Tool</h3>
@@ -194,7 +208,7 @@
             <div class="project-item" data-category="robotics ml-ai">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/img/projects/robot-dashboard.jpg" alt="Robotic Dashboard">
+                        <img src="assets/img/projects/robot-dashboard.jpg" alt="Robotic Dashboard" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>Dashboard for Autonomous Robotic Patrols</h3>
@@ -237,7 +251,7 @@
             <div class="project-item" data-category="ml-ai data-engineering">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/img/projects/airbnb.jpg" alt="AirbnbLense">
+                        <img src="assets/img/projects/airbnb.jpg" alt="AirbnbLense" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>AirbnbLense – Personalized Recommendation System</h3>
@@ -280,7 +294,7 @@
             <div class="project-item" data-category="visualization ml-ai">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/img/projects/cyclist.jpg" alt="Cyclists' Performance Dashboard">
+                        <img src="assets/img/projects/cyclist.jpg" alt="Cyclists' Performance Dashboard" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>Cyclists' Performance Dashboard</h3>
@@ -322,7 +336,7 @@
             <div class="project-item" data-category="ml-ai">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/img/projects/fish-fillet.jpg" alt="Fish Fillet Color Grading">
+                        <img src="assets/img/projects/fish-fillet.jpg" alt="Fish Fillet Color Grading" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>Fish Fillet Color Grading System</h3>
@@ -406,6 +420,9 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/particles.js"></script>
     <script src="assets/js/projects.js"></script>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-sun"></i></div>
 
 </body>
 
