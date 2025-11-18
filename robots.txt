@@ -1,0 +1,11 @@
+# robots.txt for harshshroff.github.io
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://harshshroff.github.io/sitemap.xml
+
+# Disallow access to any admin or config files (if they exist in the future)
+Disallow: /config/
+Disallow: /.git/

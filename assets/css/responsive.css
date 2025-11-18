@@ -77,6 +77,20 @@
     .job-duration {
         margin-top: 0.5rem;
     }
+    .tech-badges {
+        gap: 0.4rem;
+    }
+    .tech-badge {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+    .company-logo {
+        width: 40px;
+        height: 40px;
+    }
+    .company-logo i {
+        font-size: 1.2rem;
+    }
 }
 
 

@@ -1265,6 +1265,196 @@ footer {
     border: 1px solid var(--border-color);
 }
 
+/* Enhanced Timeline Styles */
+.timeline-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+    box-shadow: 0 0 0 4px var(--bg-color), 0 0 0 6px var(--accent-color);
+}
+
+.timeline-dot i {
+    color: white;
+    font-size: 1rem;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -20px;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -20px;
+}
+
+.timeline-header-enhanced {
+    margin-bottom: 1rem;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: var(--shadow);
+}
+
+.company-logo i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-badge {
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(14, 147, 134, 0.1));
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: var(--transition);
+}
+
+.tech-badge:hover {
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.2), rgba(14, 147, 134, 0.2));
+    transform: translateY(-2px);
+}
+
+.tech-badge i {
+    font-size: 0.9rem;
+}
+
+body.light-mode .tech-badge {
+    background: linear-gradient(135deg, rgba(15, 118, 110, 0.1), rgba(11, 94, 88, 0.1));
+    border-color: var(--accent-color);
+    color: var(--accent-dark);
+}
+
+body.light-mode .tech-badge:hover {
+    background: linear-gradient(135deg, rgba(15, 118, 110, 0.2), rgba(11, 94, 88, 0.2));
+}
+
+/* Skills Proficiency Section */
+.skills-proficiency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.proficiency-category h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.proficiency-category h3 i {
+    color: var(--accent-color);
+}
+
+.proficiency-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.proficiency-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.proficiency-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.proficiency-label span:first-child {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.proficiency-value {
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.proficiency-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.proficiency-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.proficiency-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+body.light-mode .proficiency-bar {
+    background: rgba(0, 0, 0, 0.1);
+}
+
 
 /* Interests Section */
 
