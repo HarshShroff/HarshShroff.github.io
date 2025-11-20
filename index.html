@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="https://github.com/HarshShroff/HarshShroff.github.io/blob/4987c7ccb725455da7b16e5adafe4f7c79f041f6/assets/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -82,7 +82,26 @@
                 "Python",
                 "MLOps"
             ],
-            "description": "AWS Machine Learning Associate Certified AI/ML Engineer specializing in deploying production LLM systems and scalable ML infrastructure using Amazon Bedrock and SageMaker. Proven expertise in prompt engineering, RAG architectures, and multi-model LLM orchestration."
+            "description": "AWS Machine Learning Associate Certified AI/ML Engineer specializing in deploying production LLM systems and scalable ML infrastructure using Amazon Bedrock and SageMaker. Proven expertise in prompt engineering, RAG architectures, and multi-model LLM orchestration.",
+            "creator": [{
+                "@type": "ScholarlyArticle",
+                "headline": "FilletCam AI: Precision fillet color profiling using deep learning",
+                "datePublished": "2024",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Journal of Agriculture and Food Research"
+                },
+                "url": "https://doi.org/10.1016/j.jafr.2024.101461"
+            }, {
+                "@type": "ScholarlyArticle",
+                "headline": "Mosquito identification using ML on embedded systems",
+                "datePublished": "2021",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "IEEE ITU Kaleidoscope Conference"
+                },
+                "url": "https://doi.org/10.23919/ITUK53220.2021.9662116"
+            }]
         }
     </script>
 </head>
@@ -126,11 +145,44 @@
                 <div class="hero-cta">
                     <a href="projects.html" class="btn primary">View Projects</a>
                     <a href="assets/docs/Harsh_Shroff_Resume.pdf" class="btn secondary" download>Download Resume</a>
-                    <a href="contact.html" class="btn secondary">Contact</a>
+                    <a href="mailto:harshrofff@gmail.com" class="btn secondary"><i class="fas fa-envelope"></i> Email Me</a>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="neural-network">
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Updates Section -->
+        <section class="latest-updates">
+            <h2>Latest Updates</h2>
+            <div class="updates-grid">
+                <div class="update-card highlight">
+                    <div class="update-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3>AWS ML Certification</h3>
+                    <p class="update-date">Valid through April 2028</p>
+                    <p>AWS Machine Learning Associate Certified with hands-on expertise in production ML systems, SageMaker, and Bedrock deployments.</p>
+                    <a href="https://www.credly.com/badges/92e351a0-e5f5-4fba-9b43-8b590f5b8e9c/" target="_blank" rel="noopener noreferrer" class="btn small">View Credential <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="update-card">
+                    <div class="update-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Published Research</h3>
+                    <p class="update-date">2024</p>
+                    <p>Co-authored "FilletCam AI: Precision color profiling using deep learning" in the Journal of Agriculture and Food Research.</p>
+                    <a href="https://doi.org/10.1016/j.jafr.2024.101461" target="_blank" rel="noopener noreferrer" class="btn small">Read Paper <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="update-card">
+                    <div class="update-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Production Impact</h3>
+                    <p class="update-date">Recent Projects</p>
+                    <p>Delivered production LLM systems achieving <strong>60% efficiency gains</strong> and <strong>92% accuracy</strong> in real-world deployments.</p>
                 </div>
             </div>
         </section>
@@ -141,12 +193,13 @@
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-brain"></i></div>
                     <h3>Machine Learning & AI</h3>
-                    <p>Generative AI, LLMs, RAG, LangChain, PyTorch, TensorFlow, Computer Vision, YOLOv8, OpenCV, NLP</p>
+                    <p>Generative AI, LLMs, RAG, LangChain, PyTorch, TensorFlow, Computer Vision, YOLOv8, OpenCV, NLP, RLHF, Anomaly Detection, Reinforcement Learning, Time Series</p>
                     <div class="skill-tags">
                         <span>PyTorch</span>
                         <span>TensorFlow</span>
                         <span>LangChain</span>
                         <span>YOLOv8</span>
+                        <span>RLHF</span>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -162,7 +215,7 @@
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-code"></i></div>
                     <h3>Software Engineering</h3>
-                    <p>Python, C++, Java, SQL, FastAPI, Flask, Git, Docker, Kubernetes, CI/CD, Microservices</p>
+                    <p>Python, C++, Java, SQL, FastAPI, Flask, Git, Docker, Kubernetes, CI/CD, Microservices, Test-Driven Development, API Development</p>
                     <div class="skill-tags">
                         <span>Python</span>
                         <span>FastAPI</span>
@@ -189,7 +242,7 @@
                 <a href="projects.html#document-intelligence">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="assets/img/projects/geospatial.jpg" alt="An aerial view of an urban area with distinct green conservation zones and city infrastructure, representing a geospatial analysis tool." loading="lazy" decoding="async">
+                            <img src="assets/img/projects/geospatial.jpg" alt="Enterprise document intelligence platform processing 2500+ PDFs using LLM-powered OCR with AWS Textract and Claude for automated compliance workflows" loading="lazy" decoding="async">
                         </div>
                         <div class="project-info">
                             <h3>Enterprise Document Intelligence Platform</h3>
@@ -209,7 +262,7 @@
                 <a href="projects.html#recommendation-engine">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="assets/img/projects/airbnb.jpg" alt="AirbnbLense recommendation system interface" loading="lazy" decoding="async">
+                            <img src="assets/img/projects/airbnb.png" alt="AirbnbLens hybrid recommendation engine combining structured data analysis with computer vision for personalized Airbnb recommendations" loading="lazy" decoding="async">
                         </div>
                         <div class="project-info">
                             <h3>Multi-Modal Recommendation Engine</h3>
@@ -229,7 +282,7 @@
                 <a href="projects.html#medical-diagnosis">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="assets/img/projects/fish-fillet.jpg" alt="AI-powered medical diagnosis system" loading="lazy" decoding="async">
+                            <img src="assets/img/projects/dr-tongue.png" alt="AI-powered medical diagnosis system for tongue disease classification using deep learning and computer vision" loading="lazy" decoding="async">
                         </div>
                         <div class="project-info">
                             <h3>AI-Powered Medical Diagnosis System</h3>
@@ -263,8 +316,8 @@
                     <li><i class="fas fa-map-marker-alt"></i> United States</li>
                 </ul>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/harshroff/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/HarshShroff/" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/harshroff/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/HarshShroff/" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
                     <a href="mailto:harshrofff@gmail.com" aria-label="Email Me"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
