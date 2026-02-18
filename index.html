@@ -1,359 +1,984 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harsh Shroff | AWS ML Certified | Production LLM Engineer</title>
-    <meta name="description" content="Portfolio of Harsh Shroff, a Machine Learning Engineer specializing in production ML systems, LLM-powered applications, computer vision, and cloud infrastructure. AWS ML Certified with proven track record delivering production AI systems.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harsh Shroff — AI/ML Engineer</title>
+  <meta name="description" content="AI/ML Engineer building production RAG systems, neuro-symbolic AI agents, and edge-deployed computer vision. AWS ML Certified. 2 peer-reviewed publications." />
+  <meta name="keywords" content="AI Engineer, ML Engineer, LLM Agents, RAG, AWS Bedrock, SageMaker, Neuro-Symbolic AI, PydanticAI, Computer Vision, PyTorch, Production AI" />
+  <meta name="author" content="Harsh Shroff" />
+  <link rel="canonical" href="https://harshshroff.github.io/" />
 
-    <!-- SEO Meta Tags -->
-    <meta name="keywords" content="Machine Learning Engineer, AWS Bedrock, SageMaker, RAG, Prompt Engineering, LLM Engineer, Production ML, Computer Vision, PyTorch, TensorFlow, AWS ML Associate">
-    <meta name="author" content="Harsh Shroff">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Harsh Shroff — AI/ML Engineer" />
+  <meta property="og:description" content="I build production AI systems — neuro-symbolic agents, RAG pipelines, and edge-deployed CV." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://harshshroff.github.io/" />
+  <meta property="og:image" content="https://harshshroff.github.io/assets/img/profile.jpg" />
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://harshshroff.github.io/">
-    <meta property="og:title" content="Harsh Shroff | AWS ML Certified | Production LLM Engineer">
-    <meta property="og:description" content="AWS ML Certified Engineer specializing in production LLM systems, RAG architectures, and scalable ML infrastructure. 60% efficiency gains, 92% accuracy in production AI.">
-    <meta property="og:image" content="https://harshshroff.github.io/assets/img/profile.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Harsh Shroff — AI/ML Engineer" />
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Harsh Shroff | AWS ML Certified | Production LLM Engineer">
-    <meta name="twitter:description" content="AWS ML Certified Engineer specializing in production LLM systems, RAG architectures, and scalable ML infrastructure.">
-    <meta name="twitter:image" content="https://harshshroff.github.io/assets/img/profile.jpg">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Harsh Shroff",
+    "jobTitle": "AI/ML Engineer",
+    "url": "https://harshshroff.github.io/",
+    "email": "harshrofff@gmail.com",
+    "sameAs": [
+      "https://linkedin.com/in/harshroff/",
+      "https://github.com/HarshShroff",
+      "https://medium.com/@harshrofff",
+      "https://scholar.google.com/citations?user=n7mRqUkAAAAJ"
+    ]
+  }
+  </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
-
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Harsh Shroff",
-            "jobTitle": "Machine Learning Engineer",
-            "url": "https://harshshroff.github.io/",
-            "sameAs": [
-                "https://www.linkedin.com/in/harshroff/",
-                "https://github.com/HarshShroff/"
-            ],
-            "email": "harshrofff@gmail.com",
-            "telephone": "+16674645255",
-            "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "US"
-            },
-            "alumniOf": [{
-                "@type": "EducationalOrganization",
-                "name": "University of Maryland Baltimore County",
-                "url": "https://umbc.edu"
-            }, {
-                "@type": "EducationalOrganization",
-                "name": "Gujarat Technological University"
-            }],
-            "hasCredential": [{
-                "@type": "EducationalOccupationalCredential",
-                "name": "AWS Certified Machine Learning - Associate",
-                "credentialCategory": "certification",
-                "recognizedBy": {
-                    "@type": "Organization",
-                    "name": "Amazon Web Services"
-                },
-                "url": "https://www.credly.com/badges/92e351a0-e5f5-4fba-9b43-8b590f5b8e9c/"
-            }],
-            "knowsAbout": [
-                "Machine Learning",
-                "Artificial Intelligence",
-                "AWS Bedrock",
-                "Amazon SageMaker",
-                "RAG (Retrieval-Augmented Generation)",
-                "Large Language Models",
-                "Computer Vision",
-                "PyTorch",
-                "TensorFlow",
-                "Python",
-                "MLOps"
-            ],
-            "description": "AWS Machine Learning Associate Certified AI/ML Engineer specializing in deploying production LLM systems and scalable ML infrastructure using Amazon Bedrock and SageMaker. Proven expertise in prompt engineering, RAG architectures, and multi-model LLM orchestration.",
-            "creator": [{
-                "@type": "ScholarlyArticle",
-                "headline": "FilletCam AI: Precision fillet color profiling using deep learning",
-                "datePublished": "2024",
-                "publisher": {
-                    "@type": "Organization",
-                    "name": "Journal of Agriculture and Food Research"
-                },
-                "url": "https://doi.org/10.1016/j.jafr.2024.101461"
-            }, {
-                "@type": "ScholarlyArticle",
-                "headline": "Mosquito identification using ML on embedded systems",
-                "datePublished": "2021",
-                "publisher": {
-                    "@type": "Organization",
-                    "name": "IEEE ITU Kaleidoscope Conference"
-                },
-                "url": "https://doi.org/10.23919/ITUK53220.2021.9662116"
-            }]
-        }
-    </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
+  <link rel="icon" href="assets/img/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <div class="scroll-progress"></div>
 
-    <div id="particles-js"></div>
-    <header>
-        <div class="logo">
-            <a href="index.html" class="logo-link" aria-label="Go to Home">
-                <span class="logo-text">Harsh Shroff</span>
+  <!-- Scroll progress -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav id="navbar" role="navigation" aria-label="Main">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Home">HS<span class="dot">.</span></a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#featured" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="assets/docs/Harsh_Shroff_Resume.pdf" class="btn-resume" download aria-label="Download Resume">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero" aria-label="Introduction">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-chips reveal">
+        <div class="hero-eyebrow">
+          <span class="status-dot" aria-hidden="true"></span>
+          Available for Senior AI/ML Roles &mdash; Open to Relocation
+        </div>
+        <div class="hero-building">
+          <span class="building-dot" aria-hidden="true"></span>
+          Currently Building: Bio-Oracle v2.0
+        </div>
+      </div>
+
+      <h1 class="hero-title reveal reveal-delay-1">
+        Building AI That<br>
+        <span class="gradient-text">Ships to Production</span>
+      </h1>
+
+      <p class="hero-sub reveal reveal-delay-2">
+        From neuro-symbolic agents and enterprise RAG pipelines to edge-deployed computer vision
+        — I engineer AI systems that work beyond the notebook.
+      </p>
+
+      <div class="hero-typed reveal reveal-delay-3" aria-live="polite">
+        <span class="mono-label">Currently building:</span>
+        <span id="typed-text" class="typed-word"></span><span class="typed-cursor" aria-hidden="true">_</span>
+      </div>
+
+      <div class="hero-ctas reveal reveal-delay-4">
+        <a href="#featured" class="btn btn-primary">
+          View Projects
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="assets/docs/Harsh_Shroff_Resume.pdf" class="btn btn-outline" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+        </a>
+        <a href="mailto:harshrofff@gmail.com" class="btn btn-ghost">
+          harshrofff@gmail.com
+        </a>
+      </div>
+
+      <div class="hero-stats reveal reveal-delay-5">
+        <div class="stat-item">
+          <div class="stat-num"><span class="count" data-target="60">0</span><span class="stat-unit">%</span></div>
+          <div class="stat-label">Efficiency Gain<br><span class="stat-sub">VITG Production RAG</span></div>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="count" data-target="92">0</span><span class="stat-unit">%</span></div>
+          <div class="stat-label">CV Accuracy<br><span class="stat-sub">Edge Deployment</span></div>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="count" data-target="2500">0</span><span class="stat-unit">+</span></div>
+          <div class="stat-label">Docs Automated<br><span class="stat-sub">Regulatory PDFs</span></div>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="count" data-target="2">0</span></div>
+          <div class="stat-label">Publications<br><span class="stat-sub">IEEE + Elsevier</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" aria-label="About">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// about</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-photo-col reveal">
+          <img src="assets/img/profile.jpg" class="about-photo" alt="Harsh Shroff — AI/ML Engineer" />
+        </div>
+
+        <div class="about-text reveal">
+          <p>
+            I'm an AI/ML Engineer who specializes in designing and deploying
+            <strong>production-grade AI systems for regulated industries</strong>.
+            My work spans architecting multi-agent LLM pipelines on AWS Bedrock,
+            building neuro-symbolic reasoning systems, and shipping computer vision
+            to edge hardware.
+          </p>
+          <p>
+            MS in Data Science from <strong>UMBC (3.8 GPA)</strong>, with active research
+            under <strong>US Army Research Lab funding</strong> in distributed sensing and
+            autonomous systems. I've co-authored two peer-reviewed papers (IEEE + Elsevier),
+            hold an <strong>AWS Machine Learning Associate</strong> certification,
+            and care deeply about AI safety, auditability, and production observability.
+          </p>
+          <p>
+            I believe the gap between "demo" and "deployed" is where real engineering happens.
+            That's where I work.
+          </p>
+        </div>
+
+        <div class="about-cards reveal reveal-delay-1">
+          <div class="about-card">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <div class="about-card-title">MS Data Science</div>
+              <div class="about-card-sub">UMBC — GPA 3.8/4.0</div>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div>
+              <div class="about-card-title">AWS ML Certified</div>
+              <div class="about-card-sub">Active through Apr 2028</div>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <div>
+              <div class="about-card-title">2 Peer-Reviewed Papers</div>
+              <div class="about-card-sub">IEEE ITU + Elsevier JAFR</div>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="about-card-title">Army Research Lab</div>
+              <div class="about-card-sub">Funded Research, UMBC CRDSA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills" aria-label="Skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// skills</span>
+        <h2 class="section-title">Technical Stack</h2>
+      </div>
+
+      <div class="skills-grid">
+        <!-- LLM Stack -->
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <span class="skill-group-icon" aria-hidden="true">⬡</span>
+            <h3 class="skill-group-title">LLM Stack</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-accent">LLM Agents</span>
+            <span class="tag tag-accent">RAG Systems</span>
+            <span class="tag tag-accent">Neuro-Symbolic AI</span>
+            <span class="tag tag-accent">PydanticAI</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">Prompt Engineering</span>
+            <span class="tag">RLHF</span>
+            <span class="tag">Fine-tuning</span>
+            <span class="tag">Multi-model Orchestration</span>
+          </div>
+        </div>
+
+        <!-- Core AI / ML -->
+        <div class="skill-group reveal reveal-delay-1">
+          <div class="skill-group-header">
+            <span class="skill-group-icon" aria-hidden="true">⬡</span>
+            <h3 class="skill-group-title">Core AI / ML</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-purple">PyTorch</span>
+            <span class="tag tag-purple">TensorFlow</span>
+            <span class="tag tag-purple">Computer Vision</span>
+            <span class="tag tag-purple">YOLOv8</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Transformers</span>
+            <span class="tag">CNNs / RNNs</span>
+            <span class="tag">Anomaly Detection</span>
+            <span class="tag">Time Series</span>
+          </div>
+        </div>
+
+        <!-- Cloud & MLOps -->
+        <div class="skill-group reveal reveal-delay-2">
+          <div class="skill-group-header">
+            <span class="skill-group-icon" aria-hidden="true">⬡</span>
+            <h3 class="skill-group-title">Cloud &amp; MLOps</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-accent">AWS Bedrock</span>
+            <span class="tag tag-accent">SageMaker</span>
+            <span class="tag tag-accent">Lambda</span>
+            <span class="tag">Textract</span>
+            <span class="tag">MLflow</span>
+            <span class="tag">W&amp;B</span>
+            <span class="tag">Docker</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">Model Governance</span>
+            <span class="tag">A/B Testing</span>
+          </div>
+        </div>
+
+        <!-- Data Engineering -->
+        <div class="skill-group reveal reveal-delay-3">
+          <div class="skill-group-header">
+            <span class="skill-group-icon" aria-hidden="true">⬡</span>
+            <h3 class="skill-group-title">Data Engineering</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Spark</span>
+            <span class="tag">Hadoop</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Redis</span>
+            <span class="tag tag-purple">Pinecone</span>
+            <span class="tag tag-purple">pgvector</span>
+            <span class="tag">ETL Pipelines</span>
+            <span class="tag">Feature Engineering</span>
+          </div>
+        </div>
+
+        <!-- Software -->
+        <div class="skill-group reveal reveal-delay-4">
+          <div class="skill-group-header">
+            <span class="skill-group-icon" aria-hidden="true">⬡</span>
+            <h3 class="skill-group-title">Software &amp; Deploy</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-accent">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Gradio</span>
+            <span class="tag">CUDA</span>
+            <span class="tag tag-purple">NVIDIA Jetson</span>
+            <span class="tag">Edge Computing</span>
+            <span class="tag">Raspberry Pi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURED PROJECTS — BENTO GRID ═══ -->
+  <section id="featured" aria-label="Featured Projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// featured</span>
+        <h2 class="section-title">Production AI Systems</h2>
+        <p class="section-desc">End-to-end engineering — not tutorials.</p>
+      </div>
+
+      <div class="bento-grid">
+
+        <!-- CARD 1: Bio-Oracle (large) -->
+        <article class="bento-card bento-large bento-purple reveal" aria-label="Bio-Oracle project">
+          <div class="bento-card-tag">NEURO-SYMBOLIC AI</div>
+          <h3 class="bento-title">Bio-Oracle</h3>
+          <p class="bento-desc">
+            A neuro-symbolic AI agent for high-throughput drug discovery screening.
+            Combines deep learning segmentation (Cellpose) with LLM-based structured
+            reasoning (PydanticAI + Gemini) to automate phenotypic analysis on the
+            BBBC021 dataset — where pure deep learning fails interpretability requirements.
+          </p>
+          <div class="bento-case">
+            <div class="bento-case-row">
+              <span class="case-label">Problem</span>
+              <span class="case-text">Drug discovery screening requires CV precision + auditable reasoning — pure DL fails interpretability.</span>
+            </div>
+            <div class="bento-case-row">
+              <span class="case-label">Approach</span>
+              <span class="case-text">Neuro-symbolic agent: Cellpose segmentation → 30+ morphological features → PydanticAI + Gemini reasoning.</span>
+            </div>
+            <div class="bento-case-row">
+              <span class="case-label">Outcome</span>
+              <span class="case-text">Verifiable reasoning chains on BBBC021 dataset; optimized for Apple Silicon MPS local inference.</span>
+            </div>
+          </div>
+          <div class="bento-pipeline">
+            <span class="pipeline-step">Cellpose Segmentation</span>
+            <span class="pipeline-arrow" aria-hidden="true">→</span>
+            <span class="pipeline-step">Feature Factory (30+ features)</span>
+            <span class="pipeline-arrow" aria-hidden="true">→</span>
+            <span class="pipeline-step">Robust Z-score Norm</span>
+            <span class="pipeline-arrow" aria-hidden="true">→</span>
+            <span class="pipeline-step">PydanticAI Agent</span>
+            <span class="pipeline-arrow" aria-hidden="true">→</span>
+            <span class="pipeline-step">Gemini Reasoning</span>
+          </div>
+          <div class="bento-tech">
+            <span class="tech-tag">PydanticAI</span>
+            <span class="tech-tag">Gemini</span>
+            <span class="tech-tag">Cellpose</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Apple MPS</span>
+          </div>
+          <div class="bento-actions">
+            <a href="https://github.com/HarshShroff/Bio-Oracle" target="_blank" rel="noopener noreferrer" class="bento-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Code
             </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+          </div>
+        </article>
+
+        <!-- CARD 2: PelloHorter -->
+        <article class="bento-card bento-medium bento-blue reveal-left reveal-delay-1" aria-label="PelloHorter project">
+          <div class="bento-card-tag">CONVERSATIONAL AI</div>
+          <h3 class="bento-title">PelloHorter</h3>
+          <p class="bento-desc">
+            AI-powered phone agent conducting autonomous outbound calls with human-like conversational flow.
+          </p>
+          <div class="bento-case">
+            <div class="bento-case-row">
+              <span class="case-label">Problem</span>
+              <span class="case-text">Manual candidate screening calls don't scale — repetitive, time-consuming, inconsistent.</span>
+            </div>
+            <div class="bento-case-row">
+              <span class="case-label">Approach</span>
+              <span class="case-text">Real-time voice synthesis + LLM dialogue management + dynamic response generation pipeline.</span>
+            </div>
+            <div class="bento-case-row">
+              <span class="case-label">Outcome</span>
+              <span class="case-text">Fully autonomous screening and qualification workflows operating at scale.</span>
+            </div>
+          </div>
+          <div class="bento-tech">
+            <span class="tech-tag">Voice AI</span>
+            <span class="tech-tag">LLM</span>
+            <span class="tech-tag">Speech Processing</span>
+            <span class="tech-tag">Real-time Inference</span>
+          </div>
+          <div class="bento-actions">
+            <span class="bento-private">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Private Repo
+            </span>
+          </div>
+        </article>
+
+        <!-- CARD 3: Enterprise RAG -->
+        <article class="bento-card bento-medium bento-green reveal-right reveal-delay-2" aria-label="Enterprise Document Intelligence project">
+          <div class="bento-card-tag">RAG SYSTEM · PRODUCTION</div>
+          <h3 class="bento-title">Enterprise Document Intelligence</h3>
+          <p class="bento-desc">
+            Production RAG system automating 2,500+ regulatory PDFs with SOC2-compliant audit trails.
+          </p>
+          <div class="bento-case">
+            <div class="bento-case-row">
+              <span class="case-label">Problem</span>
+              <span class="case-text">Manual compliance review of 2,500+ unstructured regulatory PDFs was a critical bottleneck.</span>
+            </div>
+            <div class="bento-case-row">
+              <span class="case-label">Approach</span>
+              <span class="case-text">AWS Textract OCR → pgvector embeddings → Claude 3.5 on Bedrock → Streamlit audit dashboard.</span>
+            </div>
+            <div class="bento-case-row">
+              <span class="case-label">Outcome</span>
+              <span class="case-text">60% cut in screening time, 40% efficiency gain, 100% auditability, SOC2-compliant.</span>
+            </div>
+          </div>
+          <div class="bento-tech">
+            <span class="tech-tag">AWS Bedrock</span>
+            <span class="tech-tag">SageMaker</span>
+            <span class="tech-tag">Textract</span>
+            <span class="tech-tag">pgvector</span>
+            <span class="tech-tag">Streamlit</span>
+          </div>
+          <div class="bento-actions">
+            <span class="bento-private">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Proprietary — VITG Corp
+            </span>
+          </div>
+        </article>
+
+        <!-- CARD 4: FilletCam (published) -->
+        <article class="bento-card bento-small bento-amber reveal-scale reveal-delay-3" aria-label="FilletCam AI project">
+          <div class="bento-card-tag">CV · PUBLISHED</div>
+          <h3 class="bento-title">FilletCam AI</h3>
+          <div class="bento-case">
+            <div class="bento-case-row">
+              <span class="case-label">Problem</span>
+              <span class="case-text">Manual fish fillet grading is slow and inconsistent on production lines.</span>
+            </div>
+            <div class="bento-case-row">
+              <span class="case-label">Approach</span>
+              <span class="case-text">YOLOv8 + OpenCV deployed on Raspberry Pi for real-time edge inference.</span>
+            </div>
+            <div class="bento-case-row">
+              <span class="case-label">Outcome</span>
+              <span class="case-text">92% accuracy. Published in Elsevier JAFR 2024.</span>
+            </div>
+          </div>
+          <div class="bento-tech">
+            <span class="tech-tag">YOLOv8</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">Raspberry Pi</span>
+          </div>
+          <div class="bento-actions">
+            <a href="https://doi.org/10.1016/j.jafr.2024.101461" target="_blank" rel="noopener noreferrer" class="bento-btn bento-btn-sm">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Elsevier JAFR
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 5: Mosquito -->
+        <article class="bento-card bento-small bento-amber reveal-scale reveal-delay-4" aria-label="Mosquito Identification project">
+          <div class="bento-card-tag">EDGE AI · PUBLISHED</div>
+          <h3 class="bento-title">Mosquito Wing Beat Classification</h3>
+          <div class="bento-case">
+            <div class="bento-case-row">
+              <span class="case-label">Problem</span>
+              <span class="case-text">Species-level mosquito ID needed in resource-constrained field environments.</span>
+            </div>
+            <div class="bento-case-row">
+              <span class="case-label">Approach</span>
+              <span class="case-text">TinyML audio classifier on ARM Cortex-M — no network, no GPU.</span>
+            </div>
+            <div class="bento-case-row">
+              <span class="case-label">Outcome</span>
+              <span class="case-text">&lt;100ms inference. Published IEEE ITU Kaleidoscope 2021.</span>
+            </div>
+          </div>
+          <div class="bento-tech">
+            <span class="tech-tag">ARM Cortex-M</span>
+            <span class="tech-tag">TinyML</span>
+            <span class="tech-tag">Python</span>
+          </div>
+          <div class="bento-actions">
+            <a href="https://doi.org/10.23919/ITUK53220.2021.9662116" target="_blank" rel="noopener noreferrer" class="bento-btn bento-btn-sm">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              IEEE ITU
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 6: Silicon Oracle (full row) -->
+        <article class="bento-card bento-wide bento-rose reveal" aria-label="Silicon Oracle project">
+          <div class="bento-card-tag">AI PLATFORM · LIVE DEMO</div>
+          <h3 class="bento-title">Silicon Oracle</h3>
+          <p class="bento-desc">
+            Full-stack AI stock analysis &amp; paper trading platform. BYOK architecture — each user supplies their own API keys, so rate limits never hit everyone at once. Real-time market data, Oracle Score&trade; (15-factor analysis), Gemini-powered email intelligence, and Alpaca paper trading.
+          </p>
+          <div class="bento-case">
+            <div class="bento-case-row">
+              <span class="case-label">Problem</span>
+              <span class="case-text">Retail investors lack professional-grade AI analysis without expensive subscriptions or shared rate-limit bottlenecks.</span>
+            </div>
+            <div class="bento-case-row">
+              <span class="case-label">Approach</span>
+              <span class="case-text">BYOK Flask platform: Finnhub market data → Oracle Score™ (15-factor system) → Gemini 2.0 Flash AI analysis → Alpaca paper trading → automated hourly email intelligence alerts.</span>
+            </div>
+            <div class="bento-case-row">
+              <span class="case-label">Outcome</span>
+              <span class="case-text">Live multi-user platform with real-time analysis, hourly AI market intelligence, paper trading, and portfolio tracking — deployed free on Render.</span>
+            </div>
+          </div>
+          <div class="bento-tech">
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Gemini 2.0 Flash</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Alpaca API</span>
+            <span class="tech-tag">Supabase</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">APScheduler</span>
+          </div>
+          <div class="bento-actions">
+            <a href="https://silicon-oracle.onrender.com/" target="_blank" rel="noopener noreferrer" class="bento-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Live Demo
+            </a>
+            <span class="bento-private">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Private Repo
+            </span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MORE PROJECTS ═══ -->
+  <section id="projects" aria-label="All Projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// projects</span>
+        <h2 class="section-title">More Work</h2>
+      </div>
+
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI / LLM</button>
+        <button class="filter-btn" data-filter="cv">Computer Vision</button>
+        <button class="filter-btn" data-filter="data">Data Engineering</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <article class="project-card reveal" data-category="ai" aria-label="Multi-Modal Recommendation Engine">
+          <div class="project-card-header">
+            <div class="project-card-icon ai-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+            </div>
+            <div class="project-card-tags">
+              <span class="tag-sm">AI</span>
+              <span class="tag-sm">OpenAI</span>
+            </div>
+          </div>
+          <h3 class="project-card-title">Multi-Modal Recommendation Engine</h3>
+          <p class="project-card-desc">
+            Hybrid recommendation system combining structured data, computer vision,
+            and LLM personalization. A/B tested for continuous improvement.
+          </p>
+          <div class="project-impact">
+            <span class="impact-num">−20%</span> bounce &nbsp;&bull;&nbsp; <span class="impact-num">+40%</span> engagement
+          </div>
+          <div class="project-stack">Python · OpenAI API · PostgreSQL · A/B Testing</div>
+          <a href="https://github.com/HarshShroff/AirbnbLens_CapturingYourStyle" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View code">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </article>
+
+        <article class="project-card reveal reveal-delay-1" data-category="data" aria-label="Infrastructure Risk Assessment">
+          <div class="project-card-header">
+            <div class="project-card-icon data-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="project-card-tags">
+              <span class="tag-sm">Data</span>
+              <span class="tag-sm">GeoSpatial</span>
+            </div>
+          </div>
+          <h3 class="project-card-title">Infrastructure Risk Assessment</h3>
+          <p class="project-card-desc">
+            Real-time geospatial risk analytics for transportation infrastructure.
+            Multi-source data fusion, interactive Leaflet maps, PostgreSQL/PostGIS
+            backend, color-coded risk overlays for decision support.
+          </p>
+          <div class="project-stack">Flask · PostgreSQL · PostGIS · Leaflet</div>
+          <a href="https://github.com/HarshShroff/Real-Time-Infrastructure-Risk-Assessment-for-Transportation-Networks" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View code">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-category="data" aria-label="Real-Time Analytics Dashboard">
+          <div class="project-card-header">
+            <div class="project-card-icon data-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <div class="project-card-tags">
+              <span class="tag-sm">Data</span>
+              <span class="tag-sm">ML</span>
+            </div>
+          </div>
+          <h3 class="project-card-title">Real-Time Analytics Dashboard</h3>
+          <p class="project-card-desc">
+            Distributed ML system for multi-modal sensor data analytics.
+            Real-time inference, interactive Plotly visualizations, 20%
+            performance improvement on optimization tasks (Army Research Lab).
+          </p>
+          <div class="project-impact">
+            <span class="impact-num">+20%</span> performance
+          </div>
+          <div class="project-stack">Python · Dash · Plotly · PyTorch</div>
+          <a href="https://github.com/HarshShroff/Dash4Athletes" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View code">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </article>
+
+        <article class="project-card reveal reveal-delay-1" data-category="cv" aria-label="Gesture Control System">
+          <div class="project-card-header">
+            <div class="project-card-icon cv-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <div class="project-card-tags">
+              <span class="tag-sm">CV</span>
+              <span class="tag-sm">Edge</span>
+            </div>
+          </div>
+          <h3 class="project-card-title">Gesture-Based Control System</h3>
+          <p class="project-card-desc">
+            Real-time gesture recognition for robotic system control.
+            Deployed on NVIDIA Jetson with CUDA-optimized inference
+            for low-latency embedded operation in field environments.
+          </p>
+          <div class="project-stack">Python · OpenCV · NVIDIA Jetson · CUDA</div>
+          <a href="https://github.com/HarshShroff/GestureControlledJetbot" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View code">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERIENCE — TIMELINE ═══ -->
+  <section id="experience" aria-label="Experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// experience</span>
+        <h2 class="section-title">Where I've Worked</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-period">Mar 2023 &mdash; Present</span>
+              <span class="timeline-badge current">Current</span>
+            </div>
+            <h3 class="timeline-role">AI/ML Researcher</h3>
+            <div class="timeline-org">UMBC Center for Real-time Distributed Sensing and Autonomy</div>
+            <ul class="timeline-bullets">
+              <li><strong>Army Research Lab funding</strong> — built distributed ML systems for multi-modal sensor fusion; 20% performance improvement in real-time optimization</li>
+              <li>Designed and deployed <strong>CHARLIE</strong>, a voice-enabled AI agent (speech recognition + LLM inference + real-time dialogue) for autonomous system control &mdash; <a href="https://youtube.com/shorts/lnpXHmMsiLs" target="_blank" rel="noopener noreferrer" class="inline-link">Demo ↗</a></li>
+              <li>Engineered production CV systems on <strong>NVIDIA Jetson</strong> edge devices for real-time perception pipelines</li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="timeline-tech">
+              <span class="tech-tag-sm">PyTorch</span>
+              <span class="tech-tag-sm">TensorFlow</span>
+              <span class="tech-tag-sm">NVIDIA Jetson</span>
+              <span class="tech-tag-sm">Voice AI</span>
+              <span class="tech-tag-sm">LLM</span>
             </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Harsh Shroff</h1>
-                <div class="typed-container">
-                    <span id="typed"></span>
-                </div>
-                <p class="small-text" aria-label="Highlights">Open to Relocation • AWS ML Certified (Valid through Apr 2028) • Published Researcher</p>
-                <div class="small-text" aria-label="What I do">ML & AI: Generative AI, LLMs, RAG, PyTorch, YOLOv8 • Cloud: AWS (SageMaker, Lambda, Bedrock) • Engineering: Python, FastAPI, Docker, K8s</div>
-                <p class="hero-description">AWS Machine Learning Associate Certified AI/ML Engineer specializing in deploying production LLM systems and scalable ML infrastructure using Amazon Bedrock and SageMaker. Proven expertise in prompt engineering, RAG architectures, and
-                    multi-model LLM orchestration with hands-on experience achieving 60% efficiency gains and 92% accuracy in production AI systems.</p>
-                <div class="hero-cta">
-                    <a href="projects.html" class="btn primary">View Projects</a>
-                    <a href="assets/docs/Harsh_Shroff_Resume.pdf" class="btn secondary" download>Download Resume</a>
-                    <a href="mailto:harshrofff@gmail.com" class="btn secondary"><i class="fas fa-envelope"></i> Email Me</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="neural-network">
-                </div>
-            </div>
-        </section>
-
-        <!-- Latest Updates Section -->
-        <section class="latest-updates">
-            <h2>Latest Updates</h2>
-            <div class="updates-grid">
-                <div class="update-card highlight">
-                    <div class="update-icon">
-                        <i class="fab fa-aws"></i>
-                    </div>
-                    <h3>AWS ML Certification</h3>
-                    <p class="update-date">Valid through April 2028</p>
-                    <p>AWS Machine Learning Associate Certified with hands-on expertise in production ML systems, SageMaker, and Bedrock deployments.</p>
-                    <a href="https://www.credly.com/badges/92e351a0-e5f5-4fba-9b43-8b590f5b8e9c/" target="_blank" rel="noopener noreferrer" class="btn small">View Credential <i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <div class="update-card">
-                    <div class="update-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3>Published Research</h3>
-                    <p class="update-date">2024</p>
-                    <p>Co-authored "FilletCam AI: Precision color profiling using deep learning" in the Journal of Agriculture and Food Research.</p>
-                    <a href="https://doi.org/10.1016/j.jafr.2024.101461" target="_blank" rel="noopener noreferrer" class="btn small">Read Paper <i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <div class="update-card">
-                    <div class="update-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Production Impact</h3>
-                    <p class="update-date">Recent Projects</p>
-                    <p>Delivered production LLM systems achieving <strong>60% efficiency gains</strong> and <strong>92% accuracy</strong> in real-world deployments.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="skills-overview">
-            <h2>Core Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
-                    <h3>Machine Learning & AI</h3>
-                    <p>Generative AI, LLMs, RAG, LangChain, PyTorch, TensorFlow, Computer Vision, YOLOv8, OpenCV, NLP, RLHF, Anomaly Detection, Reinforcement Learning, Time Series</p>
-                    <div class="skill-tags">
-                        <span>PyTorch</span>
-                        <span>TensorFlow</span>
-                        <span>LangChain</span>
-                        <span>YOLOv8</span>
-                        <span>RLHF</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-                    <h3>Cloud & MLOps</h3>
-                    <p>AWS (Bedrock, SageMaker, Lambda, Textract, EC2, S3), MLflow, Weights & Biases, Model Governance, A/B Testing</p>
-                    <div class="skill-tags">
-                        <span>AWS Bedrock</span>
-                        <span>SageMaker</span>
-                        <span>MLflow</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h3>Software Engineering</h3>
-                    <p>Python, C++, Java, SQL, FastAPI, Flask, Git, Docker, Kubernetes, CI/CD, Microservices, Test-Driven Development, API Development</p>
-                    <div class="skill-tags">
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>Docker</span>
-                        <span>Kubernetes</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-database"></i></div>
-                    <h3>Data Engineering</h3>
-                    <p>Pandas, NumPy, Spark, Hadoop, Feature Engineering, Data Pipelines, ETL, PostgreSQL, MongoDB, Redis</p>
-                    <div class="skill-tags">
-                        <span>Spark</span>
-                        <span>PostgreSQL</span>
-                        <span>MongoDB</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="featured-projects">
-            <h2>Featured Projects</h2>
-            <div class="project-cards">
-                <a href="projects.html#document-intelligence">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/img/projects/geospatial.jpg" alt="Enterprise document intelligence platform processing 2500+ PDFs using LLM-powered OCR with AWS Textract and Claude for automated compliance workflows" loading="lazy" decoding="async">
-                        </div>
-                        <div class="project-info">
-                            <h3>Enterprise Document Intelligence Platform</h3>
-                            <div class="project-meta">
-                                <span class="impact-metric">2,500+ Documents • 40% Efficiency</span>
-                            </div>
-                            <p>Built scalable document processing system automating extraction from 2,500+ PDFs using LLM-powered OCR pipelines and cloud infrastructure with real-time API endpoints.</p>
-                            <div class="project-tech">
-                                <span>AWS</span>
-                                <span>Textract</span>
-                                <span>Claude/Llama</span>
-                                <span>Streamlit</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="projects.html#recommendation-engine">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/img/projects/airbnb.png" alt="AirbnbLens hybrid recommendation engine combining structured data analysis with computer vision for personalized Airbnb recommendations" loading="lazy" decoding="async">
-                        </div>
-                        <div class="project-info">
-                            <h3>Multi-Modal Recommendation Engine</h3>
-                            <div class="project-meta">
-                                <span class="impact-metric">20% Lower Bounce • 40% More Engagement</span>
-                            </div>
-                            <p>Engineered hybrid recommendation system combining structured data analysis with computer vision, reducing user bounce rate by 20% through personalized AI-driven recommendations.</p>
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>OpenAI API</span>
-                                <span>Computer Vision</span>
-                                <span>A/B Testing</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="projects.html#medical-diagnosis">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/img/projects/dr-tongue.png" alt="AI-powered medical diagnosis system for tongue disease classification using deep learning and computer vision" loading="lazy" decoding="async">
-                        </div>
-                        <div class="project-info">
-                            <h3>AI-Powered Medical Diagnosis System</h3>
-                            <div class="project-meta">
-                                <span class="impact-metric">High Accuracy • Real-time</span>
-                            </div>
-                            <p>Designed end-to-end ML web application for medical image classification achieving high diagnostic accuracy using deep learning and computer vision with production-ready inference pipeline.</p>
-                            <div class="project-tech">
-                                <span>TensorFlow</span>
-                                <span>Flask</span>
-                                <span>Gradio</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="view-all">
-                <a href="projects.html" class="btn secondary">View All Projects</a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="enhanced-footer">
-        <div class="footer-container">
-            <!-- Contact Information Section -->
-            <div class="footer-section contact-section">
-                <h3>Contact Me</h3>
-                <ul class="contact-list">
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:harshrofff@gmail.com">harshrofff@gmail.com</a></li>
-                    <li><i class="fas fa-phone"></i> <a href="tel:+16674645255">667-464-5255</a></li>
-                    <li><i class="fas fa-map-marker-alt"></i> United States</li>
-                </ul>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/harshroff/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/HarshShroff/" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
-                    <a href="mailto:harshrofff@gmail.com" aria-label="Email Me"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-
-            <!-- Quick Links Section -->
-            <div class="footer-section links-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Resume Download Section -->
-            <div class="footer-section download-section">
-                <h3>Download Resume</h3>
-                <p>Get a copy of my detailed resume to learn more about my experience in AI/ML, data science, and robotics.</p>
-                <a href="assets/docs/Harsh_Shroff_Resume.pdf" class="btn footer-btn" download><i class="fas fa-download"></i> Download PDF</a>
-            </div>
+          </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 Harsh Shroff. All rights reserved.</p>
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-period">Jun 2024 &mdash; May 2025</span>
+            </div>
+            <h3 class="timeline-role">AI/ML Engineer — Production AI Systems</h3>
+            <div class="timeline-org">VITG Corp., Halethorpe MD</div>
+            <ul class="timeline-bullets">
+              <li>Architected <strong>production RAG system</strong> on AWS Bedrock (Claude 3.5) — processed 2,500+ regulatory PDFs, cut screening time by <strong>60%</strong></li>
+              <li>Built <strong>semantic search</strong> with vector embeddings + AWS Textract — 100% auditability, SOC2-compliant logging</li>
+              <li>Established <strong>ML governance frameworks</strong>: monitoring pipelines, hallucination evaluation metrics, LLM observability dashboards</li>
+              <li>Built scalable <strong>ETL pipelines + FastAPI services</strong> for multi-model LLM orchestration in production</li>
+            </ul>
+            <div class="timeline-tech">
+              <span class="tech-tag-sm">AWS Bedrock</span>
+              <span class="tech-tag-sm">SageMaker</span>
+              <span class="tech-tag-sm">FastAPI</span>
+              <span class="tech-tag-sm">Docker</span>
+              <span class="tech-tag-sm">PostgreSQL</span>
+            </div>
+          </div>
         </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/particles.js"></script>
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-period">Aug 2023 &mdash; Dec 2023</span>
+            </div>
+            <h3 class="timeline-role">Data Scientist Intern — Computer Vision</h3>
+            <div class="timeline-org">The Conservation Fund, Shepherdstown WV</div>
+            <ul class="timeline-bullets">
+              <li>Built <strong>YOLOv8 + OpenCV</strong> pipeline achieving <strong>92% accuracy</strong> — deployed on Raspberry Pi for real-time edge quality assessment</li>
+              <li>Co-authored peer-reviewed research; published in <strong>Elsevier Journal of Agriculture and Food Research</strong> (2024)</li>
+            </ul>
+            <div class="timeline-tech">
+              <span class="tech-tag-sm">YOLOv8</span>
+              <span class="tech-tag-sm">OpenCV</span>
+              <span class="tech-tag-sm">Raspberry Pi</span>
+              <span class="tech-tag-sm">Edge ML</span>
+            </div>
+          </div>
+        </div>
 
-    <!-- Theme Toggle Button -->
-    <div class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-sun"></i></div>
+        <div class="timeline-item reveal reveal-delay-3">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-period">May 2021 &mdash; Jun 2022</span>
+            </div>
+            <h3 class="timeline-role">ML Engineer — Applied AI &amp; Audio Analytics</h3>
+            <div class="timeline-org">WeHear Innovations Pvt. Ltd., Ahmedabad India</div>
+            <ul class="timeline-bullets">
+              <li>Developed <strong>Personal Hearing Intelligence (PHI)</strong> ML models — longitudinal audio analysis for personalized hearing-risk metrics on bone-conduction hardware</li>
+              <li>Built <strong>time-series feature engineering</strong> pipelines for high-frequency sensor data; early-risk detection through statistical monitoring</li>
+              <li>Integrated model outputs into <strong>production mobile apps</strong> via firmware team collaboration, translating raw audio predictions into clinical insights</li>
+            </ul>
+            <div class="timeline-tech">
+              <span class="tech-tag-sm">Python</span>
+              <span class="tech-tag-sm">Time Series</span>
+              <span class="tech-tag-sm">Audio Processing</span>
+              <span class="tech-tag-sm">Mobile Integration</span>
+            </div>
+          </div>
+        </div>
 
+      </div>
+
+      <!-- Education -->
+      <div class="education-block reveal">
+        <div class="edu-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div>
+          <div class="edu-degree">Master of Science, Data Science</div>
+          <div class="edu-school">University of Maryland Baltimore County (UMBC)</div>
+          <div class="edu-meta">Aug 2022 – May 2024 &nbsp;&bull;&nbsp; GPA: 3.8 / 4.0</div>
+          <div class="edu-courses">ML · Deep Learning · NLP · Computer Vision · Big Data Systems · Statistical Analysis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ RESEARCH & CREDENTIALS ═══ -->
+  <section id="research" aria-label="Research and Credentials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// research</span>
+        <h2 class="section-title">Publications &amp; Credentials</h2>
+      </div>
+
+      <div class="research-grid">
+        <!-- Publications -->
+        <div class="research-col">
+          <h3 class="research-col-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Peer-Reviewed Publications
+          </h3>
+
+          <div class="pub-card reveal">
+            <div class="pub-venue">Elsevier · Journal of Agriculture and Food Research · 2024</div>
+            <h4 class="pub-title">FilletCam AI: Precision color profiling of fish fillets using deep learning</h4>
+            <p class="pub-authors">Ranjan, R., Shroff, H., et al.</p>
+            <p class="pub-summary">YOLOv8 + OpenCV pipeline for automated fish fillet quality grading deployed on edge devices, achieving 92% accuracy. Enabled commercial AI quality control systems.</p>
+            <a href="https://doi.org/10.1016/j.jafr.2024.101461" target="_blank" rel="noopener noreferrer" class="pub-link">
+              DOI: 10.1016/j.jafr.2024.101461
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+
+          <div class="pub-card reveal reveal-delay-1">
+            <div class="pub-venue">IEEE · ITU Kaleidoscope Conference · 2021</div>
+            <h4 class="pub-title">Mosquito identification using machine learning on embedded systems</h4>
+            <p class="pub-authors">Trivedi, K., Shroff, H.</p>
+            <p class="pub-summary">TinyML pipeline for real-time mosquito wing beat classification on ARM Cortex-M microcontrollers with sub-100ms inference latency for field deployment.</p>
+            <a href="https://doi.org/10.23919/ITUK53220.2021.9662116" target="_blank" rel="noopener noreferrer" class="pub-link">
+              DOI: 10.23919/ITUK53220.2021.9662116
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Credentials + Links -->
+        <div class="research-col">
+          <h3 class="research-col-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+            Certifications
+          </h3>
+
+          <div class="cert-list reveal">
+            <a href="https://www.credly.com/badges/92e351a0-e5f5-4fba-9b43-8b590f5b8e9c/" target="_blank" rel="noopener noreferrer" class="cert-item cert-link">
+              <div class="cert-icon aws" aria-hidden="true">AWS</div>
+              <div>
+                <div class="cert-title">Machine Learning Associate
+                  <svg style="display:inline;vertical-align:middle;margin-left:4px;color:var(--accent)" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </div>
+                <div class="cert-meta">Amazon Web Services · Active through Apr 2028</div>
+              </div>
+            </a>
+            <div class="cert-item">
+              <div class="cert-icon aws" aria-hidden="true">AWS</div>
+              <div>
+                <div class="cert-title">Machine Learning Foundations</div>
+                <div class="cert-meta">Amazon Web Services</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon nvidia" aria-hidden="true">NV</div>
+              <div>
+                <div class="cert-title">Transformer-Based NLP Applications</div>
+                <div class="cert-meta">NVIDIA Deep Learning Institute</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon nvidia" aria-hidden="true">NV</div>
+              <div>
+                <div class="cert-title">GPU-Accelerated Computing</div>
+                <div class="cert-meta">NVIDIA Deep Learning Institute</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="research-col-title mt" reveal>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+            Online Presence
+          </h3>
+
+          <div class="link-cards reveal reveal-delay-1">
+            <a href="https://scholar.google.com/citations?user=n7mRqUkAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="link-card">
+              <div class="link-card-icon scholar" aria-hidden="true">G</div>
+              <div>
+                <div class="link-card-title">Google Scholar</div>
+                <div class="link-card-sub">Publications &amp; Citations</div>
+              </div>
+              <svg class="link-card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <a href="https://medium.com/@harshrofff" target="_blank" rel="noopener noreferrer" class="link-card">
+              <div class="link-card-icon medium" aria-hidden="true">M</div>
+              <div>
+                <div class="link-card-title">Medium</div>
+                <div class="link-card-sub">Writing on AI &amp; Engineering</div>
+              </div>
+              <svg class="link-card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" aria-label="Contact">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <div class="contact-label">// contact</div>
+        <h2 class="contact-title">Let's Build Something</h2>
+        <p class="contact-sub">
+          Open to Senior AI/ML Engineer roles.<br>
+          Available immediately &mdash; open to relocation.
+        </p>
+
+        <div class="contact-cta-row">
+          <button id="copy-email" class="contact-cta" data-email="harshrofff@gmail.com" aria-label="Copy email address">
+            harshrofff@gmail.com
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          </button>
+          <a href="mailto:harshrofff@gmail.com" class="contact-send" aria-label="Send email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </a>
+        </div>
+        <p id="email-toast" class="email-toast" aria-live="polite">✓ Copied to clipboard</p>
+
+        <div class="contact-links">
+          <a href="https://linkedin.com/in/harshroff/" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/HarshShroff" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://medium.com/@harshrofff" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+            Medium
+          </a>
+          <a href="https://scholar.google.com/citations?user=n7mRqUkAAAAJ" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 10a8 8 0 017.162 3.44L24 9.5z"/></svg>
+            Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-brand">Harsh Shroff</span>
+      <span class="footer-copy">&copy; <span id="year"></span> &mdash; Built from scratch, no templates.</span>
+      <a href="#hero" class="footer-top" aria-label="Back to top">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 15l7-7 7 7"/></svg>
+        Top
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
