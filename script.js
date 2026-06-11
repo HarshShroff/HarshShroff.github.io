@@ -97,11 +97,12 @@
   if (!el) return;
 
   const phrases = [
-    'LLM Agents & RAG Systems',
-    'Neuro-Symbolic AI',
-    'Edge Computer Vision',
-    'Production MLOps',
-    'Multi-Modal AI Pipelines',
+    'Multi-Agent LLM Orchestration',
+    'Enterprise RAG Architectures',
+    'LLM Fine-Tuning (LoRA / QLoRA)',
+    'Responsible AI & LLM-as-Judge',
+    'Neuro-Symbolic Reasoning',
+    'Edge AI at 50+ FPS',
   ];
 
   let phraseIdx = 0;
