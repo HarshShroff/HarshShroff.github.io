@@ -100,9 +100,9 @@
     'Multi-Agent LLM Orchestration',
     'Enterprise RAG Architectures',
     'LLM Fine-Tuning (LoRA / QLoRA)',
-    'Responsible AI & LLM-as-Judge',
+    'LLM-as-Judge Evaluation',
     'Neuro-Symbolic Reasoning',
-    'Edge AI at 50+ FPS',
+    'Voice and Vision on Jetson',
   ];
 
   let phraseIdx = 0;
